@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('/assets/iconfont/iconfont.eot');
+  src: url('/assets/iconfont/iconfont.eot?#iefix') format('eot'),
+    url('/assets/iconfont/iconfont.woff') format('woff'),
+    url('/assets/iconfont/iconfont.ttf') format('truetype'),
+    url('/assets/iconfont/iconfont.svg#iconfont') format('svg');
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased; /* 修复锯齿问题 */
+  -moz-osx-font-smoothing: grayscale; /* 修复锯齿问题 */
+}
+
+.icon-circle-link:before {
+  content: "\ea01";
+}
+
+.icon-circle-person:before {
+  content: "\ea02";
+}
+
+
+ @font-face {
+  font-family: "Nunito";
+  src: url("/font/Nunito-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("/font/Nunito-Bold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Nunito-ExtraBold";
+  src: url("/font/Nunito-ExtraBold.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Berlin_Sans_FB_Demi_Bold";
+  src: url("/font/Berlin_Sans_FB_Demi_Bold.ttf");
+}
+
+body {
+  /* background: rgb(33, 37, 48); */
+  /* height: 100vh; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  font-family: "Nunito", PingFangSC-Regular, Roboto, "Helvetica Neue", Helvetica, Tahoma, Arial, "PingFang SC", "Microsoft YaHei" Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; /* 修复锯齿问题 */
+}
+
+.page-header {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: Nunito-ExtraBold;
+}
+
+.menu-btn {
+  width: 18px;
+  position: absolute;
+  right: 20px;
+  top: 21px;
+}
+
+.page-footer {
+  color: #58668C;
+  font-size: 12px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 60px;
+}
+
+.page-content {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /* .page-header {
+    margin-top: 32px;
+    margin-bottom: 48px;
+    & img {
+      height: 24px;
+    }
+  } */
+}
+
+.copyright {
+  color: #01563D;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.mask {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.mask .arrow {
+  width: 131px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+}
+
+.mask .message {
+  font-size:20px;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:27px;
+  position: absolute;
+  top: 110px;
+  right: 80px;
+}
+
+#lang-btn {
+  color: #357D65;
+  font-size: 16px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+

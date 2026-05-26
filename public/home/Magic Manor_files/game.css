@@ -1,0 +1,3197 @@
+
+
+.nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    overflow: hidden;
+    width: 7.50rem;
+    height: 1.52rem;
+    padding-left: 0.39rem;
+    padding-right: 0.63rem;
+    background-image: url(/assets/img/game/section-top/img_1.png);
+    background-size: contain;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box
+}
+
+.nav-bar .logo {
+    width: 1.80rem;
+    /* height: ptr6(64); */
+    margin-top: 0.40rem;
+  }
+
+.nav-bar .nav-btn {
+    width: 0.50rem;
+    height: 0.50rem
+  }
+
+.nav-bar .nav-btn img {
+      width: 0.50rem;
+    }
+
+.nav-drop {
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  position: absolute;
+  z-index: 9;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  opacity: 0;
+  top: 0
+}
+
+.nav-drop.active {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.nav-drop .nav-item {
+    height: 1.20rem;
+    line-height: 1.20rem;
+    color: #24d9b2;
+    border-top: 1px solid #eaeaea;
+    font-size: 0.36rem;
+    text-align: center;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+    display: block;
+    text-decoration: none;
+  }
+
+.nav-drop .nav-head {
+    height: 1.20rem;
+    line-height: 1.20rem;
+    position: relative
+  }
+
+.nav-drop .nav-head .nav-close-btn {
+      position: absolute;
+      top: 0.50rem;
+      right: 0.50rem;
+      width: 0.50rem;
+      height: 0.50rem;
+      line-height:  0.50rem;
+      font-size: 0
+    }
+
+.nav-drop .nav-head .nav-close-btn img {
+        width: 0.50rem;
+      }
+
+.top-section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 7.50rem;
+  /* height: ptr6(2618); */
+  background-color: #ffffff
+}
+
+.top-section .infoCommon {
+    position: relative;
+    /* overflow: hidden; */
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.top-section .longBannerWrapper {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+
+.top-section .longBanner {
+    width: 7.50rem;
+    height: 26.18rem;
+  }
+
+.top-section .container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 5.91rem;
+  }
+
+.top-section .primary {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 7.50rem;
+  }
+
+.top-section .group {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0rem;
+    top: 0rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 5.38rem;
+  }
+
+.top-section {
+
+
+  /* & .mask {
+    overflow: hidden;
+    width: ptr6(44);
+    height: ptr6(37);
+    margin-top: ptr6(49);
+    background-color: #ffffff;
+    border-radius: ptr6(3);
+  } */
+}
+
+.top-section .group1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 1.05rem;
+    margin-left: 0.72rem;
+  }
+
+.top-section .actionBg {
+    position: absolute;
+    left: 0rem;
+    top: 2.64rem;
+    width: 3.67rem;
+    height: 0.62rem;
+  }
+
+.top-section .itemLong {
+    position: relative;
+    width: 3.13rem;
+    height: 4.33rem;
+    margin-left: 3.53rem;
+  }
+
+.top-section .buttonBg {
+    position: absolute;
+    left: 0.59rem;
+    top: 1.71rem;
+    width: 4.32rem;
+    height: 1.81rem;
+  }
+
+.top-section .playGameWrapper {
+    width: 6.81rem;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    right: 0.36rem;
+    bottom: 0rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    height: 1.00rem;
+    padding-left: 2.15rem;
+    padding-right: 2.14rem;
+    /* background-image: url(./Magic\ Manor_files/btn-bg.png); */
+    background-size: 100% 100%;
+    line-height: 0.44rem;
+    white-space: pre;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+.top-section .playGame {
+    margin-top: 0.02rem;
+    font-size: 0.44rem;
+    color: #3b4f0c;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.top-section .container1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 5.68rem;
+    height: 3.20rem;
+    margin-top: 0.39rem;
+    background-image: url(/assets/img/game/section-top/img_7.png);
+    background-size: contain;
+  }
+
+.top-section .picture {
+    width: 1.01rem;
+    height: 1.01rem;
+    margin-top: 0.01rem;
+  }
+
+.top-section .bannerWrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 0.40rem;
+  }
+
+.top-section .banner {
+    width: 6.81rem;
+    height: 2.92rem;
+  }
+
+.top-section .container2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    /* height: ptr6(1001); */
+    margin-top: 0.28rem;
+    margin-bottom: 0.24rem;
+  }
+
+.top-section .primary1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 7.00rem;
+    height: 11.24rem;
+    /* background-image: url(/assets/img/game/section-top/img_10.png); */
+    background-size: 100% 100%;
+  }
+
+.top-section .info {
+    height: 0.36rem;
+    max-width: 4.50rem;
+    margin-top: 0.74rem;
+    margin-left: 1.25rem;
+    font-size: 0.42rem;
+    line-height: 0.42rem;
+    color: #875043;
+    white-space: pre;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.top-section .article {
+    display: -webkit-inline-box;
+    width: 4.82rem;
+    margin-top: 0.31rem;
+    margin-left: 1.34rem;
+    font-size: 0.16rem;
+    line-height: 0.25rem;
+    color: #9b6108;
+    white-space: normal;
+    webkit-box-orient: vertical;
+    webkit-line-clamp: 5;
+  }
+
+.top-section .summary {
+    display: -webkit-inline-box;
+    width: 4.72rem;
+    margin-top: 0.28rem;
+    margin-left: 1.34rem;
+    font-size: 0.16rem;
+    line-height: 0.22rem;
+    color: #9b6108;
+    white-space: normal;
+    webkit-box-orient: vertical;
+    webkit-line-clamp: 2;
+  }
+
+.top-section .info1 {
+    /* height: ptr6(31); */
+    max-width: 4.72rem;
+    margin-top: 0.24rem;
+    margin-left: 1.14rem;
+    font-size: 0.42rem;
+    line-height: 0.42rem;
+    color: #864f42;
+    white-space: pre;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+
+  }
+
+.top-section .article1 {
+    display: -webkit-inline-box;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 4.74rem;
+    margin-top: 0.30rem;
+    font-size: 0.18rem;
+    line-height: 0.25rem;
+    color: #9b6108;
+    white-space: normal;
+    webkit-box-orient: vertical;
+    webkit-line-clamp: 4;
+  }
+
+.top-section .summary1 {
+    display: -webkit-inline-box;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 4.74rem;
+    margin-top: 0.22rem;
+    font-size: 0.18rem;
+    line-height: 0.23rem;
+    color: #9b6108;
+    white-space: normal;
+    webkit-box-orient: vertical;
+    webkit-line-clamp: 2;
+  }
+
+.top-section .info2 {
+    /* height: ptr6(20); */
+    display: -webkit-inline-box;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 4.74rem;
+    margin-top: 0.14rem;
+    font-size: 0.18rem;
+    line-height: 0.18rem;
+    color: #9b6108;
+    white-space: nowrap;
+  }
+
+.top-section .cover {
+    position: absolute;
+    right: 0.11rem;
+    bottom: 0rem;
+    width: 6.54rem;
+    height: 5.44rem;
+  }
+
+.section-bottom {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 7.49rem
+
+}
+
+.section-bottom .bottom-bg {
+    height: 1200px;
+    background: url(/assets/img/game/section-bottom/img_0.png) 0 100% / 100% auto no-repeat;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+
+.section-bottom .longBannerWrapper {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    top: 0rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+
+.section-bottom .longBanner {
+    width: 7.49rem;
+    height: 14.46rem;
+  }
+
+.section-bottom .wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0.48rem;
+  }
+
+.section-bottom .wrapper a {
+    font-size: 0;
+  }
+
+.section-bottom .iconLogo {
+    width: 0.32rem;
+    margin-top: 0.04rem;
+    margin-right: 0.23rem;
+  }
+
+.section-bottom .iconText {
+    /* width: ptr6(16); */
+    height: 0.32rem;
+    margin-right: 0.26rem;
+  }
+
+.section-bottom .iconPlay {
+    width: 0.30rem;
+    height: 0.22rem;
+    margin-right: 0.27rem;
+  }
+
+.section-bottom .wrapper1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 0.20rem;
+    /* line-height: ptr6(14); */
+    white-space: pre;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.section-bottom .title {
+    font-size: 0.14rem;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.section-bottom .wrapper2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 0.14rem;
+    margin-bottom: 0.48rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    white-space: break-spaces;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+    width: 100%;
+  }
+
+.section-bottom .summary {
+    font-size: 0.14rem;
+    color: #ffffff;
+    text-align: center;
+    /* text-decoration: none; */
+    letter-spacing: 0rem;
+  }
+
+.section-sence {
+
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 7.50rem;
+  background-color: #fbe7c5
+
+}
+
+.section-sence .survivalMission {
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-top: 0.81rem;
+    font-size: 0.48rem;
+    line-height: 0.48rem;
+    color: #8c5600;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.section-sence .groupItem0 {
+    display: grid;
+    align-self: center;
+    margin-top: 0.66rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0.20rem;
+    grid-column-gap: 0.10rem;
+
+  }
+
+.section-sence .primary-btn,
+  .section-sence .side-btn {
+    height: 0.87rem;
+    line-height: 0.87rem;
+    background-image: url('../baseassets/img_1.png');
+    background-size: 100% 100%;
+    width: 3.36rem;
+    text-align:center;
+    font-size: 0.32rem;
+    color: #aa7014;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+
+  }
+
+.section-sence .primary-btn {
+    background-image: url('../baseassets/img_0.png');
+    color: #fff;
+  }
+
+.section-sence .sence-tab {
+    display: none;
+  }
+
+.section-sence .sence-tab.active {
+    display: block;
+
+  }
+
+.section-sence .plant {
+    position: relative;
+    margin-top: 0.66rem;
+    margin-left: 0.57rem;
+    font-size: 0.42rem;
+    line-height: 0.42rem;
+    color: #8c5600;
+    letter-spacing: 0rem;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.section-sence .article {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 6.40rem;
+    margin-top: 0.49rem;
+    margin-left: 0.49rem;
+    font-size: 0.18rem;
+    line-height: 0.26rem;
+    color: #8c5600;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.section-sence .banner {
+    position: relative;
+    width: 6.50rem;
+    margin-top: 0.48rem;
+    margin-bottom: 0.64rem;
+    margin-left: 0.57rem;
+    white-space: normal;
+  }
+
+.section-story {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    max-width: 7.50rem;
+    background-color: #2b6b57;
+    padding-bottom: 0.50rem
+
+}
+
+.section-story .primaryItem0Common {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 6.80rem;
+    width: 3.20rem;
+
+  }
+
+.section-story .synthesisPrevCommon {
+    color: #204a42;
+    text-align: left;
+    text-decoration: none;
+    font-size: 0.14rem;
+  }
+
+.section-story .ecologicalPrevCommon {
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    font-size: 0.20rem;
+    width: 2.50rem;
+    /* letter-spacing: ptr6(0); */
+  }
+
+.section-story .primaryCommon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 5.31rem;
+  }
+
+.section-story .storyBegins {
+    position: relative;
+    /* height: ptr6(43); */
+    max-width: 3.02rem;
+    margin-top: 0.66rem;
+    margin-left: 2.67rem;
+    font-size: 0.48rem;
+    line-height: 0.48rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: pre;
+    text-overflow: ellipsis;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+
+  }
+
+.section-story .list1V2Item0 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-top: 0.51rem;
+  }
+
+.section-story .primaryItem0 {
+    margin-right: 0.30rem;
+    background-color: #25856b;
+  }
+
+.section-story .primaryItem0.primary {
+    background-color: #c9e943;
+
+  }
+
+.section-story .picture {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 0.83rem;
+    height: 1.12rem;
+    margin-top: 0.96rem;
+  }
+
+.section-story .seedGene {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    /* height: ptr6(16); */
+    /* max-width: ptr6(114); */
+    margin-top: 0.15rem;
+    font-size: 0.20rem;
+    line-height: 0.20rem;
+    color: #204a42;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    /* white-space: pre; */
+    text-overflow: ellipsis;
+    /* -webkit-text-stroke: 1px rgba(54, 87, 137, 0.8); */
+    font-family: Nunito-ExtraBold;
+  }
+
+.section-story .view {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 0.16rem;
+    margin-left: 0.33rem;
+  }
+
+.section-story .synthesisPrev {
+    position: relative;
+    display: -webkit-inline-box;
+    width: 2.50rem;
+    font-size: 0.20rem;
+    line-height: 0.24rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+    webkit-box-orient: vertical;
+    webkit-line-clamp: 7;
+  }
+
+.section-story .synthesis {
+    position: absolute;
+    left: 0.56rem;
+    top: 0.06rem;
+    font-size: 0.20rem;
+    line-height: 0.20rem;
+    white-space: nowrap;
+  }
+
+.section-story .primaryItem1 {
+    background-color: #25856b;
+  }
+
+.section-story .logo {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 1.56rem;
+    height: 1.25rem;
+    margin-top: 0.65rem;
+  }
+
+.section-story .theFruit {
+    position: relative;
+    max-width: 1.61rem;
+    margin-top: 0.28rem;
+    margin-left: 0.77rem;
+    font-size: 0.20rem;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+    font-family: Nunito-ExtraBold;
+  }
+
+.section-story .view1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 0.16rem;
+    margin-left: 0.35rem;
+    margin-right: 0.10rem;
+  }
+
+.section-story .list1V2Item1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-top: 0.42rem;
+  }
+
+.section-story {
+
+  /* & .list1V2Item1 .primaryItem1 {
+    margin-right: ptr6(20);
+  } */
+  /* & .primary {
+    width: ptr6(285);
+    margin-top: ptr6(2);
+    margin-right: ptr6(46);
+    background-color: #319f79;
+  } */
+
+}
+
+.section-story .image {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 1.19rem;
+    height: 1.29rem;
+    margin-top: 0.96rem;
+  }
+
+.section-story .petTame {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    height: 0.24rem;
+    max-width: 1.09rem;
+    margin-top: 0.16rem;
+    font-size: 0.20rem;
+    line-height: 0.20rem;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+    font-family: Nunito-ExtraBold;
+  }
+
+.section-story .article {
+    position: relative;
+    display: -webkit-inline-box;
+    width: 2.50rem;
+    /* margin-top: ptr6(46); */
+    margin-top: 0.16rem;
+    margin-left: 0.41rem;
+    font-size: 0.20rem;
+    line-height: 0.24rem;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+    webkit-box-orient: vertical;
+    webkit-line-clamp: 5;
+  }
+
+.section-story .side {
+    width: 2.84rem;
+    /* margin-top: -ptr6(2); */
+    background-color: #238567;
+  }
+
+.section-story .entryPic {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 1.80rem;
+    height: 0.93rem;
+    margin-top: 0.94rem;
+  }
+
+.section-story .rareNft {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    text-align: center;
+    /* height: ptr6(24); */
+    max-width: 1.10rem;
+    margin-top: 0.26rem;
+    font-size: 0.20rem;
+    line-height: 0.24rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    /* white-space: pre; */
+    text-overflow: ellipsis;
+    /* text-shadow: 1px 1px 0px #365789 */
+    font-family: Nunito-ExtraBold;
+  }
+
+.section-story {
+  /* & .exploration {
+    position: relative;
+    align-self: center;
+    height: ptr6(24);
+    max-width: ptr6(154);
+    margin-top: ptr6(48);
+    font-size: ptr6(20);
+    line-height: ptr6(20);
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: ptr6(0);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } */
+
+}
+
+.section-story .view2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    /* margin-top: ptr6(4); */
+    margin-top: 0.16rem;
+    margin-left: 0.33rem;
+  }
+
+.section-story .missionsPrev {
+    position: relative;
+    display: -webkit-inline-box;
+    width: 2.51rem;
+    font-size: 0.20rem;
+    line-height: 0.24rem;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+    webkit-box-orient: vertical;
+    webkit-line-clamp: 7;
+  }
+
+.section-story {
+  /* & .missions {
+    position: absolute;
+    left: ptr6(60);
+    top: ptr6(44);
+    font-size: ptr6(20);
+    line-height: ptr6(20);
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: ptr6(0);
+    white-space: nowrap;
+  } */
+
+}
+
+.section-mission {
+
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 7.50rem;
+  background-color: #fbe7c5
+}
+
+.section-mission .survivalMission {
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-top: 0.81rem;
+    font-size: 0.48rem;
+    line-height: 0.48rem;
+    color: #8c5600;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.section-mission .groupItem0 {
+    display: grid;
+    align-self: center;
+    margin-top: 0.66rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0.20rem;
+    grid-column-gap: 0.10rem;
+
+  }
+
+.section-mission .primary-btn,
+  .section-mission .side-btn {
+    height: 0.87rem;
+    line-height: 0.87rem;
+    background-image: url('../baseassets/img_1.png');
+    background-size: 100% 100%;
+    width: 3.36rem;
+    text-align:center;
+    font-size: 0.32rem;
+    color: #aa7014;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+
+  }
+
+.section-mission .primary-btn {
+    background-image: url('../baseassets/img_0.png');
+    color: #fff;
+  }
+
+.section-mission .sence-tab {
+    display: none;
+  }
+
+.section-mission .sence-tab.active {
+    display: block;
+
+  }
+
+.section-mission .plant {
+    position: relative;
+    margin-top: 0.66rem;
+    margin-left: 0.57rem;
+    font-size: 0.42rem;
+    line-height: 0.42rem;
+    color: #8c5600;
+    letter-spacing: 0rem;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.section-mission .article {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 6.40rem;
+    margin-top: 0.49rem;
+    margin-left: 0.49rem;
+    font-size: 0.18rem;
+    line-height: 0.26rem;
+    color: #8c5600;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.section-mission .banner {
+    position: relative;
+    width: 6.50rem;
+    margin-top: 0.48rem;
+    margin-bottom: 0.64rem;
+    margin-left: 0.57rem;
+    white-space: normal;
+  }
+
+.section-nft .mod {
+    width: 7.50rem;
+    height: 8.23rem;
+  }
+
+.section-nft .colItem0Common {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 2.79rem;
+    height: 2.63rem;
+    -webkit-box-shadow: 4px 0px 8px
+      rgba(41.0000013560057, 41.0000013560057, 41.0000013560057, 0.7);
+            box-shadow: 4px 0px 8px
+      rgba(41.0000013560057, 41.0000013560057, 41.0000013560057, 0.7);
+
+  }
+
+.section-nft .tagCommon {
+    position: relative;
+    font-size: 0.14rem;
+    color: #dddddd;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.section-nft .labelCommon {
+    position: relative;
+    font-size: 0.14rem;
+    color: #dddddd;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.section-nft .wrapperItem0Common {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 2.79rem;
+    height: 2.62rem;
+    -webkit-box-shadow: 4px 0px 8px
+      rgba(41.0000013560057, 41.0000013560057, 41.0000013560057, 0.7);
+            box-shadow: 4px 0px 8px
+      rgba(41.0000013560057, 41.0000013560057, 41.0000013560057, 0.7);
+    border-radius: 0.04rem;
+    position: relative;
+  }
+
+.section-nft .wordCommon {
+    position: relative;
+    font-size: 0.14rem;
+    color: #dddddd;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.section-nft .tag1Common {
+    position: relative;
+    font-size: 0.14rem;
+    color: #dddddd;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.section-nft .group {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 7.50rem;
+    height: 8.23rem;
+    background-color: #353d43;
+  }
+
+.section-nft .info {
+    position: relative;
+    /* height: ptr6(41); */
+    max-width: 7.38rem;
+    margin-top: 0.93rem;
+    font-size: 0.48rem;
+    /* line-height: ptr6(48); */
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    /* white-space: pre; */
+    text-overflow: ellipsis;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.section-nft .main {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0.61rem;
+  }
+
+.section-nft .gridItem0 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+.section-nft .colItem0 {
+    margin-right: 0.79rem;
+    background-color: #9745e5;
+    border-radius: 0.08rem;
+    /* overflow: hidden; */
+  }
+
+.section-nft .group1 {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    bottom: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 0.71rem;
+    background-color: #4b5c6b;
+    line-height: 0.11rem;
+    white-space: nowrap;
+  }
+
+.section-nft .view {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 0.01rem;
+    margin-right: 0.20rem;
+    line-height: 0.14rem;
+    white-space: normal;
+  }
+
+.section-nft .tag {
+    height: 0.12rem;
+    max-width: 0.96rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .orangeSeeds {
+    margin-top: 0.07rem;
+    white-space: pre;
+  }
+
+.section-nft .bscWrapperItem0 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 0.51rem;
+    height: 0.26rem;
+    margin-top: 0.05rem;
+    margin-right: 0.04rem;
+    background-color: #33cd71;
+    border-radius: 0.04rem;
+  }
+
+.section-nft .bsc {
+    max-width: 0.39rem;
+    font-size: 0.11rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .bscWrapperItem1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 0.51rem;
+    height: 0.26rem;
+    margin-top: 0.05rem;
+    background-color: #3b85e7;
+    border-radius: 0.03rem;
+  }
+
+.section-nft .bsc1 {
+    max-width: 0.39rem;
+    font-size: 0.11rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .largeIcon {
+    position: relative;
+    width: 0.76rem;
+    height: 0.68rem;
+    margin-top: 0.37rem;
+  }
+
+.section-nft .rareDegree {
+    position: relative;
+    height: 0.16rem;
+    max-width: 2.67rem;
+    margin-top: 0.28rem;
+    font-size: 0.14rem;
+    line-height: 0.14rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: pre;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .production {
+    position: relative;
+    height: 0.16rem;
+    max-width: 2.67rem;
+    margin-top: 0.10rem;
+    font-size: 0.14rem;
+    line-height: 0.14rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .colItem1 {
+    background-color: #fd6be1;
+    border-radius: 0.08rem;
+    /* overflow: hidden; */
+  }
+
+.section-nft .group2 {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    bottom: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 100%;
+    height: 0.71rem;
+    background-color: #4b5c6b;
+    line-height: 0.11rem;
+    white-space: nowrap;
+  }
+
+.section-nft .view1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-right: 0.20rem;
+    line-height: 0.14rem;
+    white-space: normal;
+  }
+
+.section-nft .label {
+    height: 0.12rem;
+    max-width: 0.84rem;
+    margin-left: 0.01rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .orangeSeeds1 {
+    margin-top: 0.07rem;
+    white-space: pre;
+  }
+
+.section-nft .bscWrapperItem01 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 0.50rem;
+    height: 0.26rem;
+    margin-top: 0.05rem;
+    margin-right: 0.05rem;
+    background-color: #33cd71;
+    border-radius: 0.04rem;
+  }
+
+.section-nft .bsc2 {
+    max-width: 0.38rem;
+    margin-top: 0.01rem;
+    font-size: 0.11rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .bscWrapperItem11 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 0.50rem;
+    height: 0.26rem;
+    margin-top: 0.05rem;
+    background-color: #3b85e7;
+    border-radius: 0.04rem;
+  }
+
+.section-nft .bsc3 {
+    max-width: 0.38rem;
+    margin-top: 0.01rem;
+    font-size: 0.11rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .largeIcon1 {
+    position: relative;
+    width: 0.75rem;
+    height: 0.68rem;
+    margin-top: 0.38rem;
+  }
+
+.section-nft .rareDegree1 {
+    position: relative;
+    height: 0.13rem;
+    max-width: 2.67rem;
+    margin-top: 0.28rem;
+    font-size: 0.14rem;
+    line-height: 0.14rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: pre;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .production1 {
+    position: relative;
+    height: 0.13rem;
+    max-width: 2.67rem;
+    margin-top: 0.14rem;
+    font-size: 0.14rem;
+    line-height: 0.14rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .gridItem1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0.30rem;
+    line-height: 0.14rem;
+  }
+
+.section-nft .wrapperItem0 {
+    margin-right: 0.75rem;
+    background-color: #518fed;
+  }
+
+.section-nft .picture {
+    position: relative;
+    width: 0.87rem;
+    height: 0.81rem;
+    margin-top: 0.33rem;
+    line-height: normal;
+  }
+
+.section-nft .rareDegree2 {
+    position: relative;
+    height: 0.13rem;
+    max-width: 2.67rem;
+    margin-top: 0.20rem;
+    font-size: 0.14rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: pre;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .production2 {
+    position: relative;
+    height: 0.13rem;
+    max-width: 2.67rem;
+    margin-top: 0.13rem;
+    font-size: 0.14rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .wrapperItem1 {
+    background-color: #37d17b;
+  }
+
+.section-nft .image {
+    position: relative;
+    width: 1.04rem;
+    height: 0.99rem;
+    margin-top: 0.30rem;
+    line-height: normal;
+  }
+
+.section-nft .rareDegree3 {
+    position: relative;
+    height: 0.13rem;
+    max-width: 2.67rem;
+    margin-top: 0.05rem;
+    font-size: 0.14rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: pre;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .production3 {
+    position: relative;
+    height: 0.13rem;
+    max-width: 2.67rem;
+    margin-top: 0.13rem;
+    font-size: 0.14rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .blockItem0 {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 0.72rem;
+    background-color: #4b5c6b;
+    line-height: 0.11rem;
+    white-space: nowrap;
+  }
+
+.section-nft .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-right: 0.20rem;
+    line-height: 0.14rem;
+    white-space: normal;
+  }
+
+.section-nft .word {
+    height: 0.11rem;
+    max-width: 0.85rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .orangeSeeds2 {
+    margin-top: 0.08rem;
+    white-space: pre;
+  }
+
+.section-nft .bscWrapperItem02 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 0.50rem;
+    height: 0.26rem;
+    margin-top: 0.04rem;
+    margin-right: 0.05rem;
+    background-color: #33cd71;
+    border-radius: 0.04rem;
+  }
+
+.section-nft .bsc4 {
+    max-width: 0.38rem;
+    margin-top: 0.01rem;
+    font-size: 0.11rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .bscWrapperItem12 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 0.50rem;
+    height: 0.26rem;
+    margin-top: 0.04rem;
+    background-color: #3b85e7;
+    border-radius: 0.04rem;
+  }
+
+.section-nft .bsc5 {
+    max-width: 0.38rem;
+    margin-top: 0.01rem;
+    font-size: 0.11rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .blockItem1 {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 0.72rem;
+    background-color: #4b5c6b;
+    line-height: 0.11rem;
+    white-space: nowrap;
+  }
+
+.section-nft .container1 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-right: 0.20rem;
+    line-height: 0.14rem;
+    white-space: normal;
+  }
+
+.section-nft .tag1 {
+    height: 0.11rem;
+    max-width: 0.85rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .orangeSeeds3 {
+    margin-top: 0.08rem;
+    white-space: pre;
+  }
+
+.section-nft .bscWrapperItem03 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 0.51rem;
+    height: 0.26rem;
+    margin-top: 0.04rem;
+    margin-right: 0.04rem;
+    background-color: #33cd71;
+    border-radius: 0.04rem;
+  }
+
+.section-nft .bsc6 {
+    max-width: 0.39rem;
+    margin-top: 0.01rem;
+    font-size: 0.11rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-nft .bscWrapperItem13 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 0.50rem;
+    height: 0.26rem;
+    margin-top: 0.04rem;
+    background-color: #3b85e7;
+    border-radius: 0.04rem;
+  }
+
+.section-nft .bsc7 {
+    max-width: 0.38rem;
+    margin-top: 0.01rem;
+    font-size: 0.11rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-character {
+
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #ffffff
+
+}
+
+.section-character .listCommon {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    overflow: hidden;
+  }
+
+.section-character .group1Common {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    background-color: #a7f3c9;
+  }
+
+.section-character .list {
+    width: 7.50rem;
+    /* height: ptr6(1214); */
+    padding-bottom: 0.48rem;
+    background-color: #5fdc95;
+  }
+
+.section-character .gameCharacters {
+    position: relative;
+    overflow: hidden;
+    max-width: 4.16rem;
+    margin-top: 0.59rem;
+    margin-left: 2.14rem;
+    font-size: 0.48rem;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: pre;
+    text-overflow: ellipsis;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.section-character .headerItem0,
+  .section-character .headerItem1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 6.74rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    overflow: hidden;
+    margin-top: 0.45rem;
+    border-width: 0.02rem;
+    border-style: solid;
+    border-color: rgba(46.3307391107082, 179.000004529953, 104.093385189772, 1);
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.section-character {
+  /* & .headerItem1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    overflow: hidden;
+    width: ptr6(674);
+    margin-top: ptr6(26);
+    border-width: ptr6(2);
+    border-style: solid;
+    border-color: rgba(46.3307391107082, 179.000004529953, 104.093385189772, 1);
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  } */
+
+}
+
+.section-character .side-header-btn {
+    font-size: 0.36rem;
+    width: 50%;
+    text-align: center;
+    height: 1.15rem;
+    color: #60c68c;
+    line-height: 1.15rem;
+    background-color: #a8f4c9
+  }
+
+.section-character .side-header-btn:nth-child(2) {
+      border-left: 1px solid #75dba1;
+    }
+
+.section-character .side-header-btn.active {
+    background: #d0ffe4;
+    color: #003818;
+  }
+
+.section-character .character-tab-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+
+.section-character .character-tab {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-item-align: center;
+        align-self: center;
+    overflow: hidden;
+    width: 6.72rem;
+    /* height: ptr6(748); */
+    margin-top: 0.28rem;
+    background-color: #ffffff;
+    display: none;
+  }
+
+.section-character .character-tab {
+  }
+
+.section-character .character-tab.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+.section-character {
+  /* & .group2 {
+    position: absolute;
+    display: flex;
+    top: ptr6(557);
+    right: ptr6(207);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: ptr6(219);
+    height: ptr6(68);
+    background-image: url(/assets/img/game/section-charactor/img_0.png);
+    background-size: contain;
+  } */
+  /* & .logo {
+    overflow: hidden;
+    width: ptr6(127);
+    height: ptr6(40);
+  } */
+
+}
+
+.section-character .itemLong {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    height: 5.45rem;
+    margin-top: 0.63rem;
+  }
+
+.section-character .luckyPlant1 {
+    position: relative;
+    margin-top: 0.44rem;
+    margin-bottom: 0.48rem;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: #5f5f5f;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+    text-align: center;
+    width: 100%;
+  }
+
+.section-character .list1 {
+    width: 7.46rem;
+    height: 7.28rem;
+    background-color: #cfffe3;
+    padding-bottom: 0.48rem;
+    /* border-width: ptr6(2);
+    border-style: solid;
+    border-color: rgba(46.3307391107082, 179.000004529953, 104.093385189772, 1); */
+  }
+
+.section-character .luckyPlant2 {
+    position: relative;
+    max-width: 6.11rem;
+    margin-top: 0.68rem;
+    margin-left: 0.67rem;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: #003818;
+    text-align: left;
+    letter-spacing: 0rem;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.section-character .playPrev {
+    position: relative;
+    display: -webkit-inline-box;
+    /* overflow: hidden; */
+    width: 5.60rem;
+    /* height: ptr6(127); */
+    margin-top: 0.28rem;
+    margin-left: 0.67rem;
+    font-size: 0.19rem;
+    line-height: 0.26rem;
+    color: #003818;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+    webkit-box-orient: vertical;
+    webkit-line-clamp: 5;
+  }
+
+.section-character .play {
+    position: relative;
+    max-width: 6.09rem;
+    margin-top: 0.49rem;
+    margin-left: 0.68rem;
+    font-size: 0.32rem;
+    line-height: 0.32rem;
+    color: #003818;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.section-character .body {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-top: 0.49rem;
+    margin-left: 0.74rem;
+  }
+
+.section-character .groupItem0 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-right: 0.44rem;
+  }
+
+.section-character .largeIcon {
+    position: relative;
+    width: 0.69rem;
+    height: 0.86rem;
+    margin-left: 0.12rem;
+  }
+
+.section-character .blindBox {
+    position: relative;
+    margin-top: 0.20rem;
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    color: #003818;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: pre;
+  }
+
+.section-character .groupItem01 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0.56rem;
+  }
+
+.section-character .picture {
+    position: relative;
+    width: 0.83rem;
+    height: 0.74rem;
+  }
+
+.section-character .seeds {
+    position: relative;
+    overflow: hidden;
+    height: 0.21rem;
+    max-width: 0.71rem;
+    margin-top: 0.24rem;
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    color: #003818;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-character .groupItem1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-right: 0.54rem;
+  }
+
+.section-character .logo1 {
+    position: relative;
+    width: 1.08rem;
+    height: 0.78rem;
+  }
+
+.section-character .land {
+    position: relative;
+    overflow: hidden;
+    height: 0.20rem;
+    max-width: 0.58rem;
+    margin-top: 0.26rem;
+    margin-left: 0.31rem;
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    color: #003818;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-character .groupItem11 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+.section-character .image {
+    position: relative;
+    width: 0.87rem;
+    height: 0.78rem;
+  }
+
+.section-character .market {
+    position: relative;
+    overflow: hidden;
+    height: 0.20rem;
+    max-width: 0.85rem;
+    margin-top: 0.24rem;
+    margin-left: 0.07rem;
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    color: #003818;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-character .button {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    height: 0.66rem;
+    padding-left: 0.53rem;
+    padding-right: 0.49rem;
+    margin-top: 0.53rem;
+    margin-left: 0.67rem;
+    background-color: #e4ffef;
+    background-image: -webkit-gradient(
+      linear,
+      left bottom, left top,
+      from(rgb(111, 173, 243)),
+      to(rgb(106, 251, 236))
+    );
+    background-image: linear-gradient(
+      to top,
+      rgb(111, 173, 243),
+      rgb(106, 251, 236)
+    );
+    line-height: 0.21rem;
+    white-space: pre;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+.section-character .viewMore {
+    margin-top: -ptr6(3);
+    font-size: 0.21rem;
+    color: #003818;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.section-feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #ffffff;
+  white-space: pre;
+  font-family: "Berlin_Sans_FB_Demi_Bold";
+  overflow: hidden
+  /* & .unknownPowersPrevCommon {
+    position: relative;
+    font-size: ptr6(32);
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: ptr6(0);
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  } */
+  /* & .forestNaturesCommon {
+    position: relative;
+    font-size: ptr6(42);
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: ptr6(0);
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  } */
+
+}
+
+.section-feature .container {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    overflow: hidden;
+    width: 7.49rem;
+    height: 5.53rem;
+    margin-left: 0.01rem;
+    background-color: #353d43;
+    line-height: 0.48rem;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+.section-feature .challengeSurvivalPrev {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    /* overflow: hidden; */
+    max-width: 4.45rem;
+    margin-top: 0.69rem;
+    font-size: 0.48rem;
+    color: #60dc96;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+
+  }
+
+.section-feature .challengeSurvival {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    max-width: 4.69rem;
+    margin-top: 0.09rem;
+    font-size: 0.48rem;
+    color: #60dc96;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+
+  }
+
+.section-feature .main {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-top: 0.31rem;
+    margin-left: 0.60rem;
+    line-height: 0.32rem;
+  }
+
+.section-feature .group {
+    /* position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; */
+    margin-bottom: 0.51rem;
+    margin-right: 0.19rem;
+    font-size: 0.32rem;
+    color: #ffffff;
+    line-height: 0.22rem;
+  }
+
+.section-feature .layer {
+    position: relative;
+    width: 4.06rem;
+    height: 3.26rem;
+    line-height: normal;
+    white-space: normal;
+  }
+
+.section-feature {
+  /* & .metauniversePrev {
+    position: absolute;
+    left: ptr6(0);
+    top: ptr6(7);
+    font-size: ptr6(32);
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: ptr6(0);
+  }
+  & .metauniverse {
+    position: absolute;
+    left: ptr6(8);
+    top: ptr6(54);
+    font-size: ptr6(32);
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: ptr6(0);
+  } */
+
+}
+
+.section-feature .container1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    white-space: normal;
+  }
+
+.section-feature .header {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 4.43rem;
+  }
+
+.section-feature .group1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 7.50rem;
+    height: 4.42rem;
+  }
+
+.section-feature .view {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    left: 0rem;
+    top: 0rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    overflow: hidden;
+    width: 7.50rem;
+    height: 4.42rem;
+    background-color: #518fed;
+    line-height: 0.34rem;
+  }
+
+.section-feature .title {
+    display: -webkit-inline-box;
+    overflow: hidden;
+    width: 5.27rem;
+    height: 0.67rem;
+    margin-top: 0.88rem;
+    margin-left: 1.28rem;
+    font-size: 0.35rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+    webkit-box-orient: vertical;
+    webkit-line-clamp: 2;
+  }
+
+.section-feature .banner {
+    position: relative;
+    width: 6.66rem;
+    height: 2.49rem;
+    margin-top: 1.94rem;
+    margin-left: 0.70rem;
+  }
+
+.section-feature .body {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    overflow: hidden;
+    width: 7.50rem;
+    height: 4.90rem;
+    margin-top: -ptr6(1);
+    background-color: #63d1eb;
+    line-height: 0.35rem;
+    white-space: pre;
+  }
+
+.section-feature .info {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    height: 0.31rem;
+    max-width: 5.44rem;
+    margin-top: 0.74rem;
+    font-size: 0.35rem;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-feature .info1 {
+    position: relative;
+    /* overflow: hidden;
+    height: ptr6(26); */
+    max-width: 6.04rem;
+    margin-top: 0.17rem;
+    margin-left: 1.12rem;
+    font-size: 0.35rem;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-feature .entryPic {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    width: 4.52rem;
+    height: 3.03rem;
+    margin-top: 0.08rem;
+    line-height: normal;
+    white-space: normal;
+  }
+
+.section-feature .container2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    overflow: hidden;
+    width: 7.50rem;
+    background-color: #f1cb48;
+    white-space: normal;
+  }
+
+.section-feature .neighborsEcological {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    height: 0.45rem;
+    max-width: 4.92rem;
+    margin-top: 1.12rem;
+    font-size: 0.53rem;
+    line-height: 0.53rem;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: pre;
+    text-overflow: ellipsis;
+  }
+
+.section-feature .cover {
+    position: relative;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    width: 5.24rem;
+    height: 3.02rem;
+    margin-top: 0.31rem;
+  }
+
+.section-feature .itemWrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    overflow: hidden;
+    width: 7.50rem;
+    height: 4.91rem;
+    background-color: #5fdb95;
+    line-height: 0.42rem;
+  }
+
+.section-feature .primary {
+    margin: 0 16px 24px 0.68rem;
+    line-height: 0.28rem;
+    font-size: 0.42rem;
+    color: #ffffff;
+  }
+
+.section-feature .mysterious {
+    overflow: hidden;
+    height: 0.35rem;
+    max-width: 2.93rem;
+    margin-top: 0.19rem;
+    margin-left: 0.01rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-feature .propGift {
+    overflow: hidden;
+    height: 0.37rem;
+    max-width: 2.93rem;
+    margin-top: 0.11rem;
+    margin-left: 0.01rem;
+    text-overflow: ellipsis;
+  }
+
+.section-feature .item {
+    position: relative;
+    width: 3.68rem;
+    height: 3.79rem;
+    margin-bottom: 0.48rem;
+    line-height: normal;
+    white-space: normal;
+  }
+
+.section-feature .amazonPrev {
+    position: absolute;
+    left: 0.67rem;
+    top: 1.15rem;
+    font-size: 0.42rem;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.section-feature .amazon {
+    position: absolute;
+    left: 0.68rem;
+    top: 1.62rem;
+    font-size: 0.42rem;
+    color: #ffffff;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.section-feature .list1V2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    overflow: hidden;
+    width: 7.50rem;
+    height: 6.75rem;
+    margin-top: 0.01rem;
+    background: #fff;
+    line-height: 0.39rem;
+  }
+
+.section-feature .mysteriousItemsPrev {
+    position: relative;
+    -ms-flex-item-align: center;
+        align-self: center;
+    /* height: ptr6(35); */
+    max-width: 5.58rem;
+    margin-top: 0.57rem;
+    font-size: 0.39rem;
+    color: #40cd7d;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+    line-height: 0.24rem;
+  }
+
+.section-feature .main1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    margin-top: 0.31rem;
+    line-height: normal;
+    white-space: normal;
+  }
+
+.section-feature .groupItem0 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 0.34rem;
+  }
+
+.section-feature .view1 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    width: 3.02rem;
+    height: 2.19rem;
+    background-color: #ffffff;
+    border-radius: 0.26rem;
+  }
+
+.section-feature .picture {
+    position: relative;
+    width: 0.85rem;
+    height: 0.84rem;
+    margin-top: 0.37rem;
+  }
+
+.section-feature .actionBg {
+    position: relative;
+    width: 1.65rem;
+    height: 0.37rem;
+    margin-top: 0.14rem;
+  }
+
+.section-feature .openseaio {
+    position: relative;
+    height: 0.30rem;
+    max-width: 2.90rem;
+    margin-top: 0.06rem;
+    font-size: 0.36rem;
+    line-height: 0.36rem;
+    color: #363d43;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-feature .groupItem1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: -ptr6(5);
+  }
+
+.section-feature .productWrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    width: 3.02rem;
+    height: 2.19rem;
+    background-color: #ffffff;
+    border-radius: 0.26rem;
+  }
+
+.section-feature .product {
+    width: 1.97rem;
+    height: 1.97rem;
+    margin-top: -ptr6(4);
+  }
+
+.section-feature .elementmarket {
+    position: relative;
+    height: 0.26rem;
+    max-width: 2.88rem;
+    margin-top: 0.05rem;
+    margin-left: 0.37rem;
+    font-size: 0.36rem;
+    line-height: 0.36rem;
+    color: #363d43;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+.section-feature .list1V21 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 7.50rem;
+    height: 5.37rem;
+    background-color: #43d5b5;
+    line-height: 0.39rem;
+  }
+
+.section-feature .info2 {
+    position: relative;
+    overflow: hidden;
+    height: 0.35rem;
+    max-width: 7.38rem;
+    margin-top: 0.80rem;
+    font-size: 0.39rem;
+    color: #005d48;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-feature .info3 {
+    position: relative;
+    overflow: hidden;
+    height: 0.34rem;
+    max-width: 7.38rem;
+    margin-top: 0.13rem;
+    font-size: 0.39rem;
+    color: #005d48;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-feature .info4 {
+    position: relative;
+    overflow: hidden;
+    height: 0.35rem;
+    max-width: 7.38rem;
+    margin-top: 0.14rem;
+    font-size: 0.39rem;
+    color: #005d48;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.section-feature .main2 {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0.37rem;
+    line-height: normal;
+    white-space: normal;
+  }
+
+.section-feature .groupItem01 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 1.78rem;
+    margin-right: 0.48rem;
+  }
+
+.section-feature .item1 {
+    position: relative;
+    width: 1.77rem;
+    height: 1.77rem;
+  }
+
+.section-feature .tokenpocket {
+    position: relative;
+    margin-top: 0.19rem;
+    font-size: 0.30rem;
+    line-height: 0.30rem;
+    color: #003818;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: nowrap;
+  }
+
+.section-feature .groupItem11 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+.section-feature .product1 {
+    position: relative;
+    width: 1.77rem;
+    height: 1.77rem;
+  }
+
+.section-feature .bscWallet {
+    position: relative;
+    height: 0.22rem;
+    max-width: 1.65rem;
+    margin-top: 0.19rem;
+    font-size: 0.30rem;
+    line-height: 0.30rem;
+    color: #003818;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: pre;
+    text-overflow: ellipsis;
+  }
+
+.cookie-consent-dialog {
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 6.92rem;
+  height: 3.38rem;
+  margin-top: 0.47rem;
+  background-size: contain;
+  white-space: pre;
+  background: #fff;
+  border-radius: 0.16rem;
+  display: none;
+  font-family: "Berlin_Sans_FB_Demi_Bold";
+  margin-left: auto;
+  margin-right: auto
+}
+
+.cookie-consent-dialog .cookieConsent {
+    position: relative;
+    overflow: hidden;
+    max-width: 5.62rem;
+    margin-top: 0.53rem;
+    font-size: 0.26rem;
+    line-height: 0.26rem;
+    color: #4ec56d;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    text-overflow: ellipsis;
+  }
+
+.cookie-consent-dialog .article {
+    position: relative;
+    display: -webkit-inline-box;
+    overflow: hidden;
+    width: 5.31rem;
+    height: 0.72rem;
+    margin-top: 0.33rem;
+    font-size: 0.18rem;
+    line-height: 0.24rem;
+    color: #4ec56d;
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: 0rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+    webkit-box-orient: vertical;
+    webkit-line-clamp: 3;
+  }
+
+.cookie-consent-dialog .main1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 0.43rem;
+    line-height: 0.21rem;
+    margin-bottom: 0.40rem;
+  }
+
+.cookie-consent-dialog .button {
+    padding-left: 0.43rem;
+    padding-right: 0.41rem;
+    margin-right: 0.64rem;
+    background-color: #ffe25e;
+    border-radius: 0.07rem;
+  }
+
+.cookie-consent-dialog .rejectAll {
+    /* margin-top: ptr6(4); */
+    font-size: 0.21rem;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.cookie-consent-dialog .button1 {
+    padding-left: 0.39rem;
+    padding-right: 0.38rem;
+    background-color: #43d5b5;
+    border-radius: 0.06rem;
+  }
+
+.cookie-consent-dialog .acceptAll {
+    /* margin-top: ptr6(4); */
+    font-size: 0.21rem;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0rem;
+  }
+
+.cookie-consent-dialog  .buttonCommon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+    height: 0.76rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: "Berlin_Sans_FB_Demi_Bold";
+  }
+
+/* sectino story  */
+
+.list2V1 {
+  margin-top: 0.48rem;
+  position: relative;
+  width: 6.92rem;
+  /* height: ptr6(402);
+  height: ptr6(622); */
+  /* margin-top: ptr6(479); */
+  background-color: #ffffff;
+  border-radius: 0.14rem;
+  padding-top: 0.47rem;
+  padding-bottom: 0.47rem;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.list2V1 .viewItem0Common {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+.list2V1 .actionBg {
+    width: 2.77rem;
+    height: 0.74rem;
+    margin-right: 0.37rem;
+  }
+
+.list2V1 .buttonBg {
+    width: 2.77rem;
+    height: 0.74rem;
+  }
+
+.list2V1 .viewItem1 {
+    margin-top: 0.42rem;
+  }
+
+.list2V1 .actionBg1 {
+    width: 2.77rem;
+    height: 0.73rem;
+    margin-top: -ptr6(1);
+    margin-right: 0.37rem;
+  }
+
+.list2V1 .buttonBg1 {
+    width: 2.77rem;
+    height: 0.74rem;
+  }
+
+.list2V1 .actionBg2 {
+    position: relative;
+    width: 2.77rem;
+    height: 0.76rem;
+  }
+
+
+

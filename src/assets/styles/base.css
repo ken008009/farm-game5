@@ -1,0 +1,21 @@
+@import './color.css';
+
+:root {
+  --text-primary: 12px;
+  --text-second: 14px;
+  --text-third: 16px;
+
+  --text-large: 16px;
+}
+
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+} */
+
+body {
+  margin: 0;
+}

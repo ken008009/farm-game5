@@ -1,0 +1,307 @@
+import { getImage } from '@/utils/loadImages'
+
+export default {
+    "image_game": {
+        "menu_notice": getImage('zh', 'game', 'icon_menu_notice.png'),
+        "menu_land": getImage('zh', 'game', 'icon_menu_land.png'),
+        "menu_granary": getImage('zh', 'game', 'icon_menu_granary.png'),
+        "menu_blind": getImage('zh', 'game', 'icon_menu_blind.png'),
+        "menu_market": getImage('zh', 'game', 'icon_menu_market.png'),
+        "menu_exchange": getImage('zh', 'game', 'icon_menu_exchange.png'),
+        "menu_seed": getImage('zh', 'game', 'icon_menu_seed.png'),
+        "menu_store": getImage('zh', 'game', 'icon_menu_store.png'),
+        "menu_pledge": getImage('zh', 'game', 'icon_menu_pledge.png'),
+        "menu_shop": getImage('zh', 'game', 'icon_menu_shop.png'),
+        "menu_pay": getImage('zh', 'game', 'icon_menu_pay.png'),
+        "menu_auction": getImage('zh', 'game', 'icon_menu_auction.jpg'),
+
+        "icon_seed_list": getImage('zh', 'game', 'icon_seed_list.png'),
+        "icon_record": getImage('zh', 'game', 'icon_record.png'),
+
+        "bg_user_info": getImage('zh', 'game', 'bg_user_info.png'),
+        "bg_notice": getImage('zh', 'game', 'bg_notice.png'),
+        "bg_land": getImage('zh', 'game', 'bg_land.png'),
+        "bg_land2": getImage('zh', 'game', 'bg_land2.png'),
+        "bg_land_compound": getImage('zh', 'game', 'bg_land_compound.png'),
+        "bg_granary": getImage('zh', 'game', 'bg_granary.png'),
+        "bg_granary2": getImage('zh', 'game', 'bg_granary2.png'),
+        "bg_income": getImage('zh', 'game', 'bg_income.png'),
+        "bg_blind": getImage('zh', 'game', 'bg_blind.png'),
+        "bg_blind2": getImage('zh', 'game', 'bg_blind2.png'),
+        "bg_exchange": getImage('zh', 'game', 'bg_exchange.png'),
+        "bg_seed": getImage('zh', 'game', 'bg_seed.png'),
+        "bg_staking_pledge": getImage('zh', 'game', 'bg_staking_pledge.png'),
+        "bg_redemption": getImage('zh', 'game', 'bg_redemption.png'),
+        "bg_start_game": getImage('zh', 'game', 'bg_start_game.png'),
+        "bg_result": getImage('zh', 'game', 'bg_result.png'),
+        "bg_store": getImage('zh', 'game', 'bg_store.png'),
+        "bg_store2": getImage('zh', 'game', 'bg_store2.png'),
+        "bg_market": getImage('zh', 'game', 'bg_market.png'),
+        "bg_rank": getImage('zh', 'game', 'bg_rank.png'),
+        "bg_balance": getImage('zh', 'game', 'bg_balance.png'),
+        "bg_setting": getImage('zh', 'game', 'bg_setting.png'),
+        "bg_login": getImage('zh', 'game', 'bg_login.png'),
+        "bg_login2": getImage('zh', 'game', 'bg_login2.png'),
+        "bg_login3": getImage('zh', 'game', 'bg_login3.png'),
+        "bg_sale": getImage('zh', 'game', 'bg_sale.png'),
+        "bg_rent_setting": getImage('zh', 'game', 'bg_rent_setting.png'),
+        "bg_cultivated": getImage('zh', 'game', 'bg_cultivated.png'),
+    },
+
+
+    "name_1": "西红柿",
+    "name_2": "哈密瓜",
+    "name_3": "葡萄",
+    "name_4": "橘子树",
+    "name_5": "芒果树",
+    "name_6": "苹果树",
+    "name_7": "柚子",
+    "name_8": "椰子树",
+    "name_9": "枣椰树",
+    "name_10": "红杉",
+    "name_11": "化肥",
+    "name_12": "水",
+    "name_13": "手套",
+    "name_14": "杀虫剂",
+    "name_15": "铲子",
+    "name_16": "盲盒",
+    "name_17": "地契",
+
+    "determine": "确定",
+    "confirm": "确定",
+    "sign_out": "登出",
+    "my_game_log": "游戏日志",
+    "fertility": "肥沃度",
+    "fertilizer": "化肥",
+    "fertilizer2": "施肥",
+    "land": "土地",
+    "deed": "地契",
+    "level": "等级",
+    "land_formation": "合成土地",
+    "production_increases": "增产率",
+    "plant_cost": "种植消耗",
+    "rule": "规则",
+    "confirm_the_synthesis": "确认合成",
+    "synthetic_rules": "合成规则",
+    "my_git": "我的USDT",
+    "my_ispay": "我的ISPAY",
+    "today_income": "今日收益",
+    "balance": "余额",
+    "deduct": "扣除",
+    "price": "价格",
+    "day": "天",
+    "date": "日期",
+    "submit_date": "提交日期",
+    "incoming": "收益",
+    "stake": "Stake",
+    "period": "周期",
+    "can_withdraw": "可提U额度",
+    "reward": "奖励",
+    "please_enter_the_amount": "请输入金额",
+    "please_enter_the_correct_amount": "请输入正确金额",
+    "please_enter_the_address": "请输入地址",
+    "confirm_wait": "确认排单",
+    "confirm": "确认",
+    "redemption": "赎回",
+    "prev": "上一页",
+    "last": "尾页",
+    "first": "首页",
+    "next": "下一页",
+    "skip": "跳转到",
+    "success": "操作成功",
+    "recharge_success": "充值成功",
+    "blind_box": "盲盒",
+    "magic_blind_box": "盲盒",
+    "countdown_timer": "倒计时",
+    "total": "发行量",
+    "number_sold": "已卖出",
+    "my_balance": "余额",
+    "my_pledge": "我的质押",
+    "to_buy_now": "可购买",
+    "open_box_get_products": "开盲盒获得产品",
+    "seed": "seed",
+    "seeds": "种子",
+    "prop": "道具",
+    "language": "语言",
+    "music": "音乐",
+    "congratulations": "恭喜您",
+    "synthesis_uccess": "合成成功",
+    "goods_not_enough": "物品不足",
+    "please_select_land": "请选择土地",
+    "please_select_goods": "请选择物品",
+    "please_select_different_land": "请选择不同的土地",
+    "buying_success": "购买成功",
+    "buy_again": "再次购买",
+    "game_balance": "游戏余额",
+    "wallet_balance": "钱包余额",
+    "fee": "手续费",
+    "pledge_pool": "质押池",
+    "pledge": "质押",
+    "pledge_record": "质押记录",
+    "wait_record": "全网排单信息",
+    "start_game": "开始游戏",
+    "get": "赢得",
+    "lose": "输了",
+    "play_again": "再玩一次",
+    "you_win": "您赢了",
+    "you_lose": "您输了",
+    "sorry": "抱歉",
+    "yield": "产出",
+    "grown": "成长时间",
+    "off_the_shelves": "下架",
+    "end_of_lease": "结束出租",
+    "sell": "出售",
+    "default": "默认",
+    "bulk_sell": "批量出售",
+    "bulk_rent": "批量出租",
+    "open": "打开",
+    "market": "市场",
+    "leasing": "出租",
+    "mine": "我的",
+    "hide": "隐藏",
+    "show": "展开",
+    "send": "发送",
+    "search": "搜索",
+    "buy": "购买",
+    "cancel": "取消",
+    "copy_success": "复制成功",
+    "owner": "部署者",
+    "confirm_purchase": "确认购买",
+    "buy_now": "一口价",
+    "to_buy": "出价",
+    "to_his_house": "访问农场",
+    "holders": "所有人",
+    "description": "描述",
+    "blockchain_network": "区块链网络",
+    "world": "世界",
+    "my_friend": "我的朋友",
+    "not_yet_open": "暂未开放",
+    "notice": "公告",
+    "rank": "排名",
+    "user_name": "用户",
+    "manor": "农场",
+    "neighbor": "邻居",
+    "recharge": "充值",
+    "setting": "设置",
+    "harvest": "收获",
+    "withdraw": "提现",
+    "withdraw2": "可提",
+    "game_id": "游戏 ID",
+    "transfer": "转账",
+    "exchange": "兑换",
+    "performance": "业绩",
+    "invite_git": "邀请收益",
+    "inviter": "邀请人",
+    "neighbors": "邻居数",
+    "more": "更多",
+    "address": "地址",
+    "time": "时间",
+    "bonus_time": "奖励时间",
+    "game": "游戏",
+    "wallet": "钱包",
+    "warehouse": "土地仓库",
+    "plant": "种植",
+    "select": "Select",
+    "rent": "出租",
+    "cultivate": "培育",
+    "cultivate_land": "培育土地",
+    "change_land": "替换土地",
+    "revoke_land": "收回土地",
+    "sell_success": "出售成功",
+    "rent_success": "出租成功",
+    "buy_success": "购买成功",
+    "to_his_hourse": "访问农场",
+    "harvest_ratio": "收获比率",
+    "off_the_shelves_success": "下架成功",
+    "address_empty": "地址不能为空",
+    "level2": "级别",
+    "subscription_amount": "认购金额",
+    "ratio": "倍率",
+    "released": "已释放",
+    "not_released": "待释放",
+    "static_state": "静态",
+    "direct_push": "直推",
+    "direct_acceleration": "直推加速",
+    "team": "团队",
+    "good_ordinary": "平级",
+    "all_dividend": "全网分红",
+    "total_performance": "总业绩",
+    "direct_performance": "直推业绩",
+    "regional_performance": "大区业绩",
+    "community_performance": "小区业绩",
+    "direct_number": "直推人数",
+    "activated_number": "激活人数",
+    "team_number": "团队人数",
+    "to_buy": "去认购",
+    "to_buy_detail": "查看认购和收益详情",
+    "amt": "金额",
+    "daily": "日化",
+    "subscribe": "认购",
+    "direct": "直推",
+    "static": "静态",
+    "all_net": "全网",
+    "level_number": "代数",
+    "company": "公司",
+    "community": "社区",
+    "mining": "挖矿",
+    "total_order": "我的排单数量",
+    "left_amount": "今日剩余排单额度",
+    "all": "全部",
+    "my_plant": "我的种植",
+    "please_set_your_neighbor": "请填写你的邻居",
+    "please_ennter_the_neighbor_id": "请输入你的邻居ID",
+    "please_visit_the_game_in_the_following_wallet": "请使用以下钱包登录!",
+    "granary_rule": "用户可存储USDT在粮仓中日化收益为0.2%;存储后第2天 UTC+8 时间 0:00 生息(D+1);",
+    "land_rule": "你可以用土地+土地 合成新的土地。土地根据智能合约随机算法，随机给定，稀有度和肥沃度各不相同稀有度越低，产量加成越高，肥沃度越高可种植的植物次数越多！",
+    "all_rule": `《Magic Crystal Farm》玩法指南
+
+一、盲盒：开启一个盲盒需要100U，有机会获得种子或道具。获得种子的数量范围为最少106，最多117。
+
+二、种子放大器：一种有趣的玩法模式，采用PoS机制，玩家可以充当庄家参与游戏。
+
+三、主网质押：通过主网进行代币质押获得收益。
+
+四、每日土地购买收益：每日土地购买收益按照5000 ISPay权重进行分配。
+
+五、土地直推收益：一代3%，二代2%，三代1%，管理奖按级差计算（Tier Difference）。
+
+六、种子列表（每天可种植两次）：
+	1.	番茄：106–108U
+	2.	哈密瓜：107–109U
+	3.	葡萄：108–109U
+	4.	橙子：109–111U
+	5.	芒果：100–112U
+	6.	苹果：111–113U
+	7.	葡萄柚：112–114U
+	8.	椰子：112–115U
+	9.	枣：113–116U
+	10.	红杉：114–117U
+
+直推种植收益：
+一代：0.3%
+二代：0.2%
+三代：0.1%
+
+七、道具用途：
+	1.	铲子（Shovel）：用于防止植物在1小时内被移除。当植物被移除时，租地主可获得当前收益的0.5%，例如106 × 0.5% = 0.53。
+	2.	浇水（Watering）：植物在生长过程中有5%概率需要浇水，如果不浇水生长会停止，该道具可以防止生长停止。
+	3.	杀虫剂（Insecticide）：植物在生长过程中有5%概率出现虫害，如果不使用杀虫剂生长会停止。
+	4.	手套（Gloves）：用于“偷取作物”，最多可使用50次，每次可偷取1%的种植收益，例如106 × 1% = 1.06。
+	5.	土地出租（Land Rental）：将土地出租给其他玩家，可获得4%的果树收益，例如106 × 4% = 4.24。
+
+八、ISPay质押：质押1个ISPay时按照当前价格计算，支持多次质押。例如在SAWP交易所价格下，10 ISPay = 100 USDT，则总价值为1000 USDT，在30天内可以提取1500 USDT，即1500 ÷ 30 = 每天可获得50 USDT。如果购买100 ISPay，单价200 USDT，总价值为20000 USDT，则30天可提取30000 USDT，即每天可获得1000 USDT。
+
+收益周期：
+30天：收益0.5倍
+60天：收益1倍
+180天：滚动收益可达6倍
+
+质押规则：所有质押的ISPay都会被销毁，如果想继续获得USDT收益，需要重新购买ISPay并质押到dApp中。
+
+质押挖矿收益：每日挖矿收益为0.2%，并且可以获得三代推荐奖励。
+
+推荐奖励：按照推荐用户收益计算，一代30%，二代20%，三代10%。
+
+十三、推荐机制说明：为了鼓励更多玩家参与游戏发展与推广，平台设置了三层推荐佣金机制。无论玩家是否进行质押或拥有土地，只要成功邀请新玩家参与游戏，都可以获得系统额外奖励。`
+
+}
