@@ -35,7 +35,7 @@
         <span class="item-type" :class="[subTypeSelect == 3 ? 'select-bg' : '']" @click="switchSubTypeHandler(3)">{{ $t('name_13')}}</span>
         <span class="item-type" :class="[subTypeSelect == 4 ? 'select-bg' : '']" @click="switchSubTypeHandler(4)">{{ $t('name_14')}}</span>
         <span class="item-type" :class="[subTypeSelect == 5 ? 'select-bg' : '']" @click="switchSubTypeHandler(5)">{{ $t('name_15')}}</span>
-      </div>
+      </div>      
       <div class="list-seed" v-if="tabSelect == 1">
         <div class="item-seed" v-for="(item, index) in list">
           <div class="item-border" v-if="subTabSelect == 1" @click="showDetailHandler(item)">
@@ -511,8 +511,7 @@ async function offGoods() {
       .select-bg {
         background-color: #f7d961 !important;
       }
-    }   
-    
+    }    
     .list-type {
       position: absolute;
       left: 30px;
@@ -542,7 +541,6 @@ async function offGoods() {
         background-color: #f7d961 !important;
       }
     }    
-
     .list-seed {
       position: absolute;
       top: 115px;
@@ -617,7 +615,6 @@ async function offGoods() {
         }
       }
     }
-
     .list-tool2 {
       top: 175px!important;
       max-height: 340px!important;

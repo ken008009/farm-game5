@@ -58,14 +58,9 @@
     </div>
     <div class="cont-top2">
       <div class="cont-num">
-        <span class="num">{{ $t('company')+`:${toFixed2(userInfo.one || 0)}` }}</span>
-        <span class="num">{{ $t('community')+`:${toFixed2(userInfo.two || 0)}` }}</span>
-        <span class="num">{{ $t('mining')+`:${toFixed2(userInfo.three || 0)}` }}</span>
-      </div>
-      <div class="cont-num">
-        <span class="num">{{ $t('total_performance_new')+`:${toFixed2(userInfo.newOne || 0)}` }}</span>
-        <span class="num">{{ $t('yesterday_performance')+`:${toFixed2(userInfo.newTwo || 0)}` }}</span>
-        <span class="num">{{ $t('today_performance')+`:${toFixed2(userInfo.newThree || 0)}` }}</span>
+        <span class="num">{{ $t('company')+`:${toFixed2(userInfo.one)}` }}</span>
+        <span class="num">{{ $t('community')+`:${toFixed2(userInfo.two)}` }}</span>
+        <span class="num">{{ $t('mining')+`:${toFixed2(userInfo.three)}` }}</span>
       </div>
     </div>
     <div class="cont-top3">
@@ -82,13 +77,13 @@
         <img class="icon-notice" src="@/assets/images/game/icon_rule.png" alt="">
         <span class="tip">{{ $t('rule') }}</span>
       </div>
-    </div>    
+    </div>
     <div class="cont-top5">
       <div class="cont-notice" @click="switchRank2Handler">
         <img class="icon-notice" src="@/assets/images/game/icon_rule2.png" alt="">
         <span class="tip">{{ $t('harvest') }}</span>
       </div>
-    </div>    
+    </div>       
     <div class="cont-right animated " :class="[showMenu ? 'fadeInRight' : 'fadeOutRight']">
       <img class="icon" @click="switchNoticeHandler()" :src="$t('image_game.menu_notice')" alt="">
       <img class="icon" @click="switchUserSeedHandler()" :src="$t('image_game.menu_seed')" alt="">
@@ -132,7 +127,7 @@
 
     <PopLogin v-if="showPopLogin" @success="loginSuccessHandler" @close="closeLoginHandler" />
     <PopRank v-if="showPopRank" :info="userInfo" @close="switchRankHandler" />
-    <PopRank2 v-if="showPopRank2" :info="userInfo" @close="switchRank2Handler" />
+    <PopRank2 v-if="showPopRank2" :info="userInfo" @close="switchRank2Handler" />    
     <PopUserInfo v-if="showPopUserInfo" :info="userInfo" @success="refreshHandler" @close="switchUserCenterHandler" />
     <PopNotice v-if="showPopNotice" @close="switchNoticeHandler" />
     <PopLand v-if="showPopLand" :info="userInfo" @close="switchUserLandHandler" />
@@ -853,7 +848,7 @@ async function submitMessage() {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 60px;
+    top: 24px;
     left: 15px;
     right: 15px;
 
@@ -966,12 +961,11 @@ async function submitMessage() {
 
   .cont-top2 {
     display: flex;
-    flex-direction: column;
     position: absolute;
     top: 5px;
     left: 15px;
     right: 15px;
-    height: 45px;
+    height: 20px;
 
     .cont-num {
       height: 100%;

@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="other-status" v-else>
-        <div class="plant-tou" v-if="myLandInfo.myGrowStatus == 2 && myLandInfo.oneOne == 1">
+        <div class="plant-tou" v-if="myLandInfo.myGrowStatus == 2">
           <img class="icon-shou" src="@/assets/images/game/goods_13.png" alt="">
         </div>
         <!-- <div class="plant-chan" v-if="myLandInfo.myGrowStatus == 2 || myLandInfo.myGrowStatus == 3">
@@ -63,7 +63,7 @@
           v-if="myLandInfo.isLandOwner && (myLandInfo.myGrowStatus == 2 || myLandInfo.myGrowStatus == 3)">
           <img class="icon-chanzi" src="@/assets/images/game/goods_15.png" alt="">
         </div>
-        <div class="plant-tou" v-if="myLandInfo.myGrowStatus == 2 && myLandInfo.oneOne == 1">
+        <div class="plant-tou" v-if="myLandInfo.myGrowStatus == 2">
           <img class="icon-shou" src="@/assets/images/game/goods_13.png" alt="">
         </div>
 

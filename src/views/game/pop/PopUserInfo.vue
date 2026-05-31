@@ -48,6 +48,7 @@
             <img class="icon-git" src="@/assets/images/game/icon_giw.png" alt="">
             <span class="name">{{ $t('recharge') }}USDT</span>
             <span class="num">{{ toFixed2(info.usdt) }}</span>
+            <!-- <span class="btn">{{ $t('recharge') }}</span> -->
             <span class="btn" @click="showWithdraw2Handler()">{{ $t('recharge') }}</span>
           </div>
           <div class="line"></div>
@@ -63,7 +64,7 @@
             <span class="name">{{ $t('transfer') }}USDT</span>
             <span class="num">{{ toFixed2(info.usdt) }}</span>
             <span class="btn" @click="showTransferHandler()">{{ $t('transfer') }}</span>
-          </div>           -->
+          </div> -->
           <!-- <div class="line"></div>
           <div class="item-git">
             <img class="icon-git" src="@/assets/images/game/icon_git.png" alt="">
@@ -277,7 +278,7 @@
         <span class="btn-confirm" @click="submitTransferHandler()">{{ $t('confirm') }}</span>
       </div>
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
-    </div>          
+    </div>       
     <div class="cont-pop" @click="notDo()" v-if="step == 5">
       <img class="bg" :src="$t('image_game.bg_balance')" alt="">
       <div class="cont-info">
@@ -697,7 +698,6 @@ async function toWithdraw(amount, withdrawType) {
   }
   proxy.$hideLoading()
 }
-
 async function toTransfer(amount, address) {
   proxy.$showLoading()
   const res = await gameModel.transfer(amount, address)
@@ -707,6 +707,7 @@ async function toTransfer(amount, address) {
   }
   proxy.$hideLoading()
 }
+
 </script>
 
 <style lang="scss" scoped>
