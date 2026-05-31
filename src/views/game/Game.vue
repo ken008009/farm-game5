@@ -58,9 +58,14 @@
     </div>
     <div class="cont-top2">
       <div class="cont-num">
-        <span class="num">{{ $t('company')+`:${toFixed2(userInfo.one)}` }}</span>
-        <span class="num">{{ $t('community')+`:${toFixed2(userInfo.two)}` }}</span>
-        <span class="num">{{ $t('mining')+`:${toFixed2(userInfo.three)}` }}</span>
+        <span class="num">{{ $t('company')+`:${toFixed2(userInfo.one || 0)}` }}</span>
+        <span class="num">{{ $t('community')+`:${toFixed2(userInfo.two || 0)}` }}</span>
+        <span class="num">{{ $t('mining')+`:${toFixed2(userInfo.three || 0)}` }}</span>
+      </div>
+      <div class="cont-num">
+        <span class="num">{{ $t('total_performance_new')+`:${toFixed2(userInfo.newOne || 0)}` }}</span>
+        <span class="num">{{ $t('yesterday_performance')+`:${toFixed2(userInfo.newTwo || 0)}` }}</span>
+        <span class="num">{{ $t('today_performance')+`:${toFixed2(userInfo.newThree || 0)}` }}</span>
       </div>
     </div>
     <div class="cont-top3">
@@ -827,7 +832,7 @@ async function submitMessage() {
 
   .cont-arrow {
     position: absolute;
-    top: 80px;
+    top: 95px;
     right: 25px;
     background-color: rgba(0, 0, 0, 0.6);
     font-size: 20px;
@@ -848,7 +853,7 @@ async function submitMessage() {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 24px;
+    top: 50px;
     left: 15px;
     right: 15px;
 
@@ -961,14 +966,16 @@ async function submitMessage() {
 
   .cont-top2 {
     display: flex;
+    flex-direction: column;
     position: absolute;
     top: 5px;
     left: 15px;
     right: 15px;
-    height: 20px;
+    height: 42px;
+    gap: 2px;
 
     .cont-num {
-      height: 100%;
+      height: 20px;
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -987,7 +994,7 @@ async function submitMessage() {
   .cont-top3 {
     display: flex;
     position: absolute;
-    top: 90px;
+    top: 125px;
     left: 15px;
     width: 200px;
 
@@ -1042,7 +1049,7 @@ async function submitMessage() {
   .cont-top4 {
     display: flex;
     position: absolute;
-    top: 140px;
+    top: 175px;
     left: 15px;
     width: 100px;
 
@@ -1069,7 +1076,7 @@ async function submitMessage() {
   .cont-top5 {
     display: flex;
     position: absolute;
-    top: 185px;
+    top: 225px;
     left: 15px;
     width: 100px;
 
@@ -1099,7 +1106,7 @@ async function submitMessage() {
     align-items: center;
     position: absolute;
     right: 20px;
-    top: 120px;
+    top: 135px;
 
     .icon {
       height: 52px;
