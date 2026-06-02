@@ -263,6 +263,70 @@ export const gameModel = {
       return { ok: false, ...err }
     })
   },
+  userRankList: function (page, address) {
+    return new Promise(function (resolve, reject) {
+      request({
+        url: apiConfig.userRankList,
+        method: 'GET',
+        data: {
+          page: page,
+          address: address,
+        },
+        success: (response) => {
+          resolve(response)
+        },
+        fail: (error) => {
+          reject(error)
+        }
+      })
+    }).then(function (res) {
+      return { ok: true, data: res }
+    }).catch(function (err) {
+      return { ok: false, ...err }
+    })
+  },
+  userRewardList: function (page) {
+    return new Promise(function (resolve, reject) {
+      request({
+        url: apiConfig.userRewardList,
+        method: 'GET',
+        data: {
+          page: page
+        },
+        success: (response) => {
+          resolve(response)
+        },
+        fail: (error) => {
+          reject(error)
+        }
+      })
+    }).then(function (res) {
+      return { ok: true, data: res }
+    }).catch(function (err) {
+      return { ok: false, ...err }
+    })
+  },
+  userTeamDepositList: function (page) {
+    return new Promise(function (resolve, reject) {
+      request({
+        url: apiConfig.userTeamDepositList,
+        method: 'GET',
+        data: {
+          page: page
+        },
+        success: (response) => {
+          resolve(response)
+        },
+        fail: (error) => {
+          reject(error)
+        }
+      })
+    }).then(function (res) {
+      return { ok: true, data: res }
+    }).catch(function (err) {
+      return { ok: false, ...err }
+    })
+  },
   userMarketSeedList: function (page) {
     return new Promise(function (resolve, reject) {
       request({

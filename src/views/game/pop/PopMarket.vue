@@ -78,7 +78,7 @@
                 item.useMax }}</span>
             </div>
           </div>
-          <span class="price">{{ item.amount }}<span class="unit">USDT</span></span>
+          <span class="price">{{ toFixed2(item.amount) }}<span class="unit">ISPAY</span></span>
           <span class="buy">{{ $t('buy') }}</span>
         </div>
       </div>
@@ -119,7 +119,7 @@
                   item.useNum }}</span>
               </div>
             </div>
-            <span class="price">{{ item.amount }}<span class="unit">USDT</span></span>
+            <span class="price">{{ toFixed2(item.amount) }}<span class="unit">ISPAY</span></span>
             <span class="buy">{{ $t('off_the_shelves') }}</span>
           </div>
           <div class="item-land" v-else-if="subTabSelect == 2">
@@ -188,8 +188,8 @@
             <span class="type">{{ $t('harvest_ratio') }}</span>
           </div>
         </div>
-        <span class="price" v-if="currGoods.amount">{{ currGoods.amount ? currGoods.amount : 0 }}<span
-            class="unit">USDT</span></span>
+        <span class="price" v-if="currGoods.amount">{{ currGoods.type == '2' ? toFixed2(currGoods.amount) : (currGoods.amount ? currGoods.amount : 0) }}<span
+            class="unit">{{ currGoods.type == '2' ? 'ISPAY' : 'USDT' }}</span></span>
         <div class="cont-desc">
           <span class="title">{{ $t('holders') }}:</span>
           <span class="desc-short">{{ currGoods.address }}</span>
@@ -219,7 +219,7 @@
 import { useRouter, useRoute } from 'vue-router';
 import { ref, reactive, computed, onMounted, onUnmounted } from 'vue';
 import { getGoodsImage, getLandImage } from '@/utils/loadImages';
-import { getHour } from '@/utils/util';
+import { getHour, toFixed2 } from '@/utils/util';
 import { userModel } from '@/api/model/userModel';
 import { gameModel } from '@/api/model/gameModel';
 import { getCurrentInstance } from 'vue';

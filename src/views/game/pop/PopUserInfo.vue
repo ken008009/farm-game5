@@ -80,6 +80,22 @@
             <span class="btn" @click="showRechargeISPAYHandler()">{{ $t('recharge') }}</span>
           </div>          
         </div>
+
+        <div class="cont-performance">
+          <div class="item-performance">
+            <span class="label">{{ $t('total_performance_new') }}</span>
+            <span class="num">{{ toFixed2(info.newOne || 0) }}</span>
+          </div>
+          <div class="item-performance">
+            <span class="label">{{ $t('yesterday_performance') }}</span>
+            <span class="num">{{ toFixed2(info.newTwo || 0) }}</span>
+          </div>
+          <div class="item-performance">
+            <span class="label">{{ $t('today_performance') }}</span>
+            <span class="num">{{ toFixed2(info.newThree || 0) }}</span>
+          </div>
+        </div>
+
         <div class="cont-tab">
           <div class="line"></div>
           <div class="list-tab">
@@ -91,18 +107,28 @@
             <div class="item-tab tab-s" @click="switchTabHandler(2)">
               <img class="tab-bg" v-if="tabSelect == 2" src="@/assets/images/game/icon_tab_select.png" alt="">
               <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
+              <span class="tab-name" :class="[tabSelect == 2 ? 'select' : '']">{{ $t('team') }}</span>
+            </div>
+            <div class="item-tab" @click="switchTabHandler(3)">
+              <img class="tab-bg" v-if="tabSelect == 3" src="@/assets/images/game/icon_tab_select.png" alt="">
+              <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
+              <span class="tab-name" :class="[tabSelect == 3 ? 'select' : '']">{{ $t('team') }}{{ $t('recharge') }}</span>
+            </div>
+            <!-- <div class="item-tab tab-s" @click="switchTabHandler(2)">
+              <img class="tab-bg" v-if="tabSelect == 2" src="@/assets/images/game/icon_tab_select.png" alt="">
+              <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
               <span class="tab-name" :class="[tabSelect == 2 ? 'select' : '']">L1</span>
             </div>
             <div class="item-tab tab-s" @click="switchTabHandler(3)">
               <img class="tab-bg" v-if="tabSelect == 3" src="@/assets/images/game/icon_tab_select.png" alt="">
               <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
               <span class="tab-name" :class="[tabSelect == 3 ? 'select' : '']">L2</span>
-            </div>
-            <div class="item-tab tab-s" @click="switchTabHandler(4)">
+            </div> -->
+            <!-- <div class="item-tab tab-s" @click="switchTabHandler(4)">
               <img class="tab-bg" v-if="tabSelect == 4" src="@/assets/images/game/icon_tab_select.png" alt="">
               <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
               <span class="tab-name" :class="[tabSelect == 4 ? 'select' : '']">L3</span>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="cont-num" v-if="tabSelect == 1">
@@ -117,22 +143,18 @@
         </div>
         <div class="cont-num" v-if="tabSelect == 2">
           <div class="item-num">
-            <span class="num">{{ parseInt(info.recommendTotalBiwOne) }}</span>
-            <span class="name">L1{{ $t('performance') }}</span>
+            <span class="num">{{ list.reduce((s, i) => s + (Number(i.amount) || 0), 0).toFixed(2) }}</span>
+            <span class="name">USDT收益</span>
           </div>
           <div class="item-num">
-            <span class="num">{{ parseInt(info.recommendTotalRewardOne) }}</span>
-            <span class="name">L1{{ $t('invite_git') }}</span>
+            <span class="num">{{ list.reduce((s, i) => s + (Number(i.ispayAmount) || 0), 0).toFixed(2) }}</span>
+            <span class="name">ISPAY收益</span>
           </div>
         </div>
         <div class="cont-num" v-if="tabSelect == 3">
           <div class="item-num">
-            <span class="num">{{ parseInt(info.recommendTotalBiwTwo) }}</span>
-            <span class="name">L2{{ $t('performance') }}</span>
-          </div>
-          <div class="item-num">
-            <span class="num">{{ parseInt(info.recommendTotalRewardTwo) }}</span>
-            <span class="name">L2{{ $t('invite_git') }}</span>
+            <span class="num">{{ list.reduce((s, i) => s + (Number(i.amount) || 0), 0).toFixed(2) }}</span>
+            <span class="name">USDT</span>
           </div>
         </div>
         <div class="cont-num" v-if="tabSelect == 4">
@@ -154,6 +176,18 @@
           <span class="menu2">{{ $t('time') }}</span>
           <span class="menu1">{{ $t('level') }}</span>
         </div>
+        <div class="cont-title" v-else-if="tabSelect == 2">
+          <span class="menu2">地址</span>
+          <span class="menu2">日期</span>
+          <span class="menu1">级别</span>
+          <span class="menu1">USDT</span>
+          <span class="menu1">ISPAY</span>
+        </div>
+        <div class="cont-title" v-else-if="tabSelect == 3">
+          <span class="menu2">地址</span>
+          <span class="menu2">日期</span>
+          <span class="menu1">USDT</span>
+        </div>
         <div class="cont-title" v-else>
           <span class="menu2">{{ $t('address') }}</span>
           <span class="menu2">{{ $t('bonus_time') }}</span>
@@ -166,7 +200,23 @@
             <span class="num1">{{ item.level }}</span>
           </div>
         </div>
-        <div class="list-income" v-if="tabSelect != 1">
+        <div class="list-income" v-else-if="tabSelect == 2">
+          <div class="item-income" v-for="(item, index) in list">
+            <span class="num2 ellipsis2">{{ maskString(item.address) }}</span>
+            <span class="num2">{{ item.createdAt }}</span>
+            <span class="num1">{{ item.vip }}</span>
+            <span class="num1">{{ item.amount }}</span>
+            <span class="num1">{{ item.ispayAmount }}</span>
+          </div>
+        </div>
+        <div class="list-income" v-else-if="tabSelect == 3">
+          <div class="item-income" v-for="(item, index) in list">
+            <span class="num2 ellipsis2">{{ maskString(item.address) }}</span>
+            <span class="num2">{{ item.createdAt }}</span>
+            <span class="num1">{{ item.amount }}</span>
+          </div>
+        </div>
+        <div class="list-income" v-else>
           <div class="item-income" v-for="(item, index) in list">
             <span class="num2 ellipsis2">{{ maskString(item.address) }}</span>
             <span class="num2">{{ item.createdAt }}</span>
@@ -677,9 +727,9 @@ async function getList() {
   if (tabSelect.value == 1) {
     res = await gameModel.userRecommend(1)
   } else if (tabSelect.value == 2) {
-    res = await gameModel.userRecommendL(1, 1)
+    res = await gameModel.userRewardList(1)
   } else if (tabSelect.value == 3) {
-    res = await gameModel.userRecommendL(2, 1)
+    res = await gameModel.userTeamDepositList(1)
   } else if (tabSelect.value == 4) {
     res = await gameModel.userRecommendL(3, 1)
   }
@@ -887,6 +937,34 @@ async function toTransfer(amount, address) {
           width: 100%;
           height: 1px;
           background-color: #999;
+        }
+      }
+
+      .cont-performance {
+        width: 260px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+        margin-left: 25px;
+
+        .item-performance {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 4px;
+
+          .label {
+            font-size: 12px;
+            color: #000;
+            font-weight: bold;
+          }
+
+          .num {
+            font-size: 14px;
+            color: #ed802b;
+            font-weight: bold;
+          }
         }
       }
 

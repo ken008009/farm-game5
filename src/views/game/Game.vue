@@ -62,11 +62,6 @@
         <span class="num">{{ $t('community')+`:${toFixed2(userInfo.two || 0)}` }}</span>
         <span class="num">{{ $t('mining')+`:${toFixed2(userInfo.three || 0)}` }}</span>
       </div>
-      <div class="cont-num">
-        <span class="num">{{ $t('total_performance_new')+`:${toFixed2(userInfo.newOne || 0)}` }}</span>
-        <span class="num">{{ $t('yesterday_performance')+`:${toFixed2(userInfo.newTwo || 0)}` }}</span>
-        <span class="num">{{ $t('today_performance')+`:${toFixed2(userInfo.newThree || 0)}` }}</span>
-      </div>
     </div>
     <div class="cont-top3">
       <div class="cont-notice" @click="switchAllNoticeHandler">
@@ -85,8 +80,14 @@
     </div>
     <div class="cont-top5">
       <div class="cont-notice" @click="switchRank2Handler">
-        <img class="icon-notice" src="@/assets/images/game/icon_rule2.png" alt="">
+        <img class="icon-notice" style="transform: rotate(-90deg);" src="@/assets/images/game/icon_rule2.png" alt="">
         <span class="tip">{{ $t('harvest') }}</span>
+      </div>
+    </div>  
+     <div class="cont-top6 cont-top5">
+      <div class="cont-notice" @click="switchRank3Handler">
+        <img class="icon-notice" src="@/assets/images/game/icon_rule2.png" alt="">
+        <span class="tip">排行榜</span>
       </div>
     </div>       
     <div class="cont-right animated " :class="[showMenu ? 'fadeInRight' : 'fadeOutRight']">
@@ -132,7 +133,8 @@
 
     <PopLogin v-if="showPopLogin" @success="loginSuccessHandler" @close="closeLoginHandler" />
     <PopRank v-if="showPopRank" :info="userInfo" @close="switchRankHandler" />
-    <PopRank2 v-if="showPopRank2" :info="userInfo" @close="switchRank2Handler" />    
+    <PopRank2 v-if="showPopRank2" :info="userInfo" @close="switchRank2Handler" />
+    <PopRank3 v-if="showPopRank3" :info="userInfo" @close="switchRank3Handler" />    
     <PopUserInfo v-if="showPopUserInfo" :info="userInfo" @success="refreshHandler" @close="switchUserCenterHandler" />
     <PopNotice v-if="showPopNotice" @close="switchNoticeHandler" />
     <PopLand v-if="showPopLand" :info="userInfo" @close="switchUserLandHandler" />
@@ -180,6 +182,7 @@ import PopSeed from '@/views/game/pop/PopSeed.vue';
 import PopStore from '@/views/game/pop/PopStore.vue';
 import PopRank from '@/views/game/pop/PopRank.vue';
 import PopRank2 from '@/views/game/pop/PopRank2.vue';
+import PopRank3 from '@/views/game/pop/PopRank3.vue';
 import PopUserInfo from '@/views/game/pop/PopUserInfo.vue';
 import PopLogin from '@/views/game/pop/PopLogin.vue';
 import Land from '@/views/game/Land.vue';
@@ -263,6 +266,7 @@ const showSplash = ref(true)
 const showPopUserInfo = ref(false)
 const showPopRank = ref(false)
 const showPopRank2 = ref(false)
+const showPopRank3 = ref(false)
 const showPopNotice = ref(false)
 const showPopLand = ref(false)
 const showPopGranary = ref(false)
@@ -286,6 +290,7 @@ const showPop = computed(() => {
   const flag = showPopUserInfo.value
     || showPopRank.value
     || showPopRank2.value
+    || showPopRank3.value
     || showPopNotice.value
     || showPopLand.value
     || showPopGranary.value
@@ -455,6 +460,9 @@ function switchRankHandler() {
 }
 function switchRank2Handler() {
   showPopRank2.value = !showPopRank2.value
+}
+function switchRank3Handler() {
+  showPopRank3.value = !showPopRank3.value
 }
 function switchNoticeHandler() {
   showPopNotice.value = !showPopNotice.value
@@ -832,7 +840,7 @@ async function submitMessage() {
 
   .cont-arrow {
     position: absolute;
-    top: 95px;
+    top: 80px;
     right: 25px;
     background-color: rgba(0, 0, 0, 0.6);
     font-size: 20px;
@@ -853,7 +861,7 @@ async function submitMessage() {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 50px;
+    top: 24px;
     left: 15px;
     right: 15px;
 
@@ -966,16 +974,14 @@ async function submitMessage() {
 
   .cont-top2 {
     display: flex;
-    flex-direction: column;
     position: absolute;
     top: 5px;
     left: 15px;
     right: 15px;
-    height: 42px;
-    gap: 2px;
+    height: 20px;
 
     .cont-num {
-      height: 20px;
+      height: 100%;
       width: 100%;
       display: flex;
       justify-content: space-between;
@@ -994,7 +1000,7 @@ async function submitMessage() {
   .cont-top3 {
     display: flex;
     position: absolute;
-    top: 125px;
+    top: 90px;
     left: 15px;
     width: 200px;
 
@@ -1049,7 +1055,7 @@ async function submitMessage() {
   .cont-top4 {
     display: flex;
     position: absolute;
-    top: 175px;
+    top: 140px;
     left: 15px;
     width: 100px;
 
@@ -1076,7 +1082,7 @@ async function submitMessage() {
   .cont-top5 {
     display: flex;
     position: absolute;
-    top: 225px;
+    top: 185px;
     left: 15px;
     width: 100px;
 
@@ -1100,13 +1106,20 @@ async function submitMessage() {
       }
     }
   }
+   .cont-top6 {
+    display: flex;
+    position: absolute;
+    top: 230px;
+    left: 15px;
+    width: 100px;
+  }
   .cont-right {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: absolute;
     right: 20px;
-    top: 135px;
+    top: 120px;
 
     .icon {
       height: 52px;
