@@ -93,7 +93,7 @@ export default {
     "date": "日期",
     "submit_date": "提交日期",
     "incoming": "收益",
-    "stake": "Stake",
+    "stake": "质押",
     "period": "周期",
     "can_withdraw": "可提U额度",
     "reward": "奖励",

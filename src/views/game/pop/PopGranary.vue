@@ -62,7 +62,7 @@
               <span class="menu1">{{ item.createdAt }}</span>
               <span class="menu1">{{ item.stake }}</span>
               <span class="menu1">{{ item.day }}</span>
-              <span class="menu1">{{ item.reward }}</span>
+              <span class="menu1">{{toFixed4(item.reward) }}</span>
               <!-- <span class="btn-menu" @click="confirmRedemption(item.id)">{{ $t('redemption') }}</span> -->
             </div>
           </div>

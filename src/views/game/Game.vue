@@ -57,11 +57,11 @@
       </div>
     </div>
     <div class="cont-top2">
-      <div class="cont-num">
+      <!-- <div class="cont-num">
         <span class="num">{{ $t('company')+`:${toFixed2(userInfo.one || 0)}` }}</span>
         <span class="num">{{ $t('community')+`:${toFixed2(userInfo.two || 0)}` }}</span>
         <span class="num">{{ $t('mining')+`:${toFixed2(userInfo.three || 0)}` }}</span>
-      </div>
+      </div> -->
     </div>
     <div class="cont-top3">
       <div class="cont-notice" @click="switchAllNoticeHandler">
@@ -861,7 +861,7 @@ async function submitMessage() {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 24px;
+    top: 12px;
     left: 15px;
     right: 15px;
 

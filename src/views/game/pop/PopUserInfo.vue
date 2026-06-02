@@ -141,7 +141,7 @@
             <span class="name">{{ $t('invite_git') }}</span>
           </div>
         </div>
-        <div class="cont-num" v-if="tabSelect == 2">
+        <div class="cont-num cont-num-2" v-if="tabSelect == 2">
           <div class="item-num">
             <span class="num">{{ list.reduce((s, i) => s + (Number(i.amount) || 0), 0).toFixed(2) }}</span>
             <span class="name">{{ $t('usdt_income') }}</span>
@@ -151,7 +151,7 @@
             <span class="name">{{ $t('ispay_income') }}</span>
           </div>
         </div>
-        <div class="cont-num" v-if="tabSelect == 3">
+        <div class="cont-num cont-num-2" v-if="tabSelect == 3">
           <div class="item-num">
             <span class="num">{{ list.reduce((s, i) => s + (Number(i.amount) || 0), 0).toFixed(2) }}</span>
             <span class="name">{{ $t('usdt') }}</span>
@@ -205,22 +205,22 @@
             <span class="num2 ellipsis2">{{ maskString(item.address) }}</span>
             <span class="num2">{{ item.createdAt }}</span>
             <span class="num1">{{ item.vip }}</span>
-            <span class="num1">{{ item.amount }}</span>
-            <span class="num1">{{ item.ispayAmount }}</span>
+            <span class="num1">{{ toFixed4(item.amount) }}</span>
+            <span class="num1">{{ toFixed4(item.ispayAmount) }}</span>
           </div>
         </div>
         <div class="list-income" v-else-if="tabSelect == 3">
           <div class="item-income" v-for="(item, index) in list">
             <span class="num2 ellipsis2">{{ maskString(item.address) }}</span>
             <span class="num2">{{ item.createdAt }}</span>
-            <span class="num1">{{ item.amount }}</span>
+            <span class="num1">{{ toFixed4(item.amount) }}</span>
           </div>
         </div>
         <div class="list-income" v-else>
           <div class="item-income" v-for="(item, index) in list">
             <span class="num2 ellipsis2">{{ maskString(item.address) }}</span>
             <span class="num2">{{ item.createdAt }}</span>
-            <span class="num1">{{ item.amount }}</span>
+            <span class="num1">{{ toFixed4(item.amount) }}</span>
           </div>
         </div>
       </div>
@@ -1050,6 +1050,12 @@ async function toTransfer(amount, address) {
             font-weight: bold;
           }
         }
+      }
+
+      .cont-num-2 .item-num {
+        flex-direction: row;
+        justify-content: center;
+        gap: 4px;
       }
 
       .cont-more {

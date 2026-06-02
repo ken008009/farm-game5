@@ -6,10 +6,10 @@
         <span class="id">#{{ id }}</span>
         <div class="cont-input">
           <input class="input-num" v-model="amt" type="number" :placeholder="$t('please_enter_the_amount')">
-          <span class="unit">USDT</span>
+          <span class="unit">ISPAY</span>
         </div>
-        <span class="fee">{{ $t('fee') }}:{{ fee }}USDT</span>
-        <span class="fee">{{ amt - fee }}USDT</span>
+        <span class="fee">{{ $t('fee') }}:{{ fee }}ISPAY</span>
+        <span class="fee">{{ amt - fee }}ISPAY</span>
         <span class="btn-confirm" @click="submitHandler()">{{ $t('determine') }}</span>
       </div>
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
