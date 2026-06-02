@@ -12,7 +12,7 @@ export default defineConfig({
     port: 5100,
     proxy: {
       '/api': {
-        target: 'https://www.playgamefrane.com',
+        target: 'https://www.ppflsc.com',
         changeOrigin: true,
         rewrite: path => path.replace(/^\/api/, '')      
       }
