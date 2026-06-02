@@ -112,7 +112,7 @@
             <div class="item-tab" @click="switchTabHandler(3)">
               <img class="tab-bg" v-if="tabSelect == 3" src="@/assets/images/game/icon_tab_select.png" alt="">
               <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
-              <span class="tab-name" :class="[tabSelect == 3 ? 'select' : '']">{{ $t('team') }}{{ $t('recharge') }}</span>
+              <span class="tab-name" :class="[tabSelect == 3 ? 'select' : '']">{{ $t('team_recharge') }}</span>
             </div>
             <!-- <div class="item-tab tab-s" @click="switchTabHandler(2)">
               <img class="tab-bg" v-if="tabSelect == 2" src="@/assets/images/game/icon_tab_select.png" alt="">
@@ -144,17 +144,17 @@
         <div class="cont-num" v-if="tabSelect == 2">
           <div class="item-num">
             <span class="num">{{ list.reduce((s, i) => s + (Number(i.amount) || 0), 0).toFixed(2) }}</span>
-            <span class="name">USDT收益</span>
+            <span class="name">{{ $t('usdt_income') }}</span>
           </div>
           <div class="item-num">
             <span class="num">{{ list.reduce((s, i) => s + (Number(i.ispayAmount) || 0), 0).toFixed(2) }}</span>
-            <span class="name">ISPAY收益</span>
+            <span class="name">{{ $t('ispay_income') }}</span>
           </div>
         </div>
         <div class="cont-num" v-if="tabSelect == 3">
           <div class="item-num">
             <span class="num">{{ list.reduce((s, i) => s + (Number(i.amount) || 0), 0).toFixed(2) }}</span>
-            <span class="name">USDT</span>
+            <span class="name">{{ $t('usdt') }}</span>
           </div>
         </div>
         <div class="cont-num" v-if="tabSelect == 4">
@@ -177,16 +177,16 @@
           <span class="menu1">{{ $t('level') }}</span>
         </div>
         <div class="cont-title" v-else-if="tabSelect == 2">
-          <span class="menu2">地址</span>
-          <span class="menu2">日期</span>
-          <span class="menu1">级别</span>
-          <span class="menu1">USDT</span>
-          <span class="menu1">ISPAY</span>
+          <span class="menu2">{{ $t('address_short') }}</span>
+          <span class="menu2">{{ $t('date') }}</span>
+          <span class="menu1">{{ $t('level2') }}</span>
+          <span class="menu1">{{ $t('usdt') }}</span>
+          <span class="menu1">{{ $t('ispay') }}</span>
         </div>
         <div class="cont-title" v-else-if="tabSelect == 3">
-          <span class="menu2">地址</span>
-          <span class="menu2">日期</span>
-          <span class="menu1">USDT</span>
+          <span class="menu2">{{ $t('address_short') }}</span>
+          <span class="menu2">{{ $t('date') }}</span>
+          <span class="menu1">{{ $t('usdt') }}</span>
         </div>
         <div class="cont-title" v-else>
           <span class="menu2">{{ $t('address') }}</span>

@@ -25,8 +25,8 @@
         <div class="cont-title" v-if="tabSelect == 1">
           <span class="menu1">#</span>
           <span class="menu3">{{ $t('address') }}</span>
-          <span class="menu2">直推金额</span>
-          <span class="menu2">奖励数量</span>
+          <span class="menu2">{{ $t('direct_push_amount') }}</span>
+          <span class="menu2">{{ $t('reward_amount') }}</span>
           <!-- <span class="menu1">{{ $t('rank') }}</span>
           <span class="menu3">{{ $t('user_name') }}</span> -->
           <!-- <span class="menu2">ISPAY</span> -->
@@ -60,15 +60,15 @@
         <!-- 昨日全网提现金额   前日全网提现金额   今日全网提现金额 -->
         <div class="cont-summary">
           <div class="item-summary">
-            <span class="label">昨日全网提现金额:</span>
+            <span class="label">{{ $t('yesterday_withdrawal') }}:</span>
             <span class="num">{{ toFixed4(info.newFour || 0) }}</span>
           </div>
           <div class="item-summary">
-            <span class="label">前日全网提现金额:</span>
+            <span class="label">{{ $t('previous_day_withdrawal') }}:</span>
             <span class="num">{{ toFixed4(info.newFive || 0) }}</span>
           </div>
           <div class="item-summary">
-            <span class="label">今日全网提现金额:</span>
+            <span class="label">{{ $t('today_withdrawal') }}:</span>
             <span class="num">{{ toFixed4(info.newSix || 0) }}</span>
           </div>
         </div>

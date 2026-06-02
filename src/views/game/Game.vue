@@ -87,7 +87,7 @@
      <div class="cont-top6 cont-top5">
       <div class="cont-notice" @click="switchRank3Handler">
         <img class="icon-notice" src="@/assets/images/game/icon_rule2.png" alt="">
-        <span class="tip">排行榜</span>
+        <span class="tip">{{ $t('ranking') }}</span>
       </div>
     </div>       
     <div class="cont-right animated " :class="[showMenu ? 'fadeInRight' : 'fadeOutRight']">
