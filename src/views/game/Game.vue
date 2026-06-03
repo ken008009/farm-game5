@@ -195,7 +195,6 @@ import PopAllNotice from '@/views/game/pop/PopAllNotice.vue';
 import PopAllRule from '@/views/game/pop/PopAllRule.vue';
 
 import { getCurrentInstance } from 'vue';
-import { defineOptions } from 'vue';
 defineOptions({
   name: 'Game'
 });

@@ -75,7 +75,6 @@ import PopGoodsSelect from '@/views/game/pop/PopGoodsSelect.vue';
 import PopLandCutivated from '@/views/game/pop/PopLandCutivated.vue';
 
 import { getCurrentInstance } from 'vue';
-import { defineOptions } from 'vue';
 defineOptions({
   name: 'Game2'
 });

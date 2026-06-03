@@ -9,7 +9,6 @@ import { useRouter, useRoute } from 'vue-router';
 import { useLanguageStore } from '@/stores/languageStore';
 import { useThemeStore } from '@/stores/themeStore';
 import { showToast } from 'vant';
-import { defineOptions } from 'vue';
 defineOptions({
   name: 'Home'
 });

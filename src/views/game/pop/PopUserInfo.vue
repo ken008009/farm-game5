@@ -104,10 +104,10 @@
               <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
               <span class="tab-name" :class="[tabSelect == 1 ? 'select' : '']">{{ $t('neighbor') }}</span>
             </div>
-            <div class="item-tab tab-s" @click="switchTabHandler(2)">
+            <div class="item-tab" @click="switchTabHandler(2)">
               <img class="tab-bg" v-if="tabSelect == 2" src="@/assets/images/game/icon_tab_select.png" alt="">
               <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
-              <span class="tab-name" :class="[tabSelect == 2 ? 'select' : '']">{{ $t('team') }}</span>
+              <span class="tab-name" :class="[tabSelect == 2 ? 'select' : '']">{{ $t('team_tier_difference') }}</span>
             </div>
             <div class="item-tab" @click="switchTabHandler(3)">
               <img class="tab-bg" v-if="tabSelect == 3" src="@/assets/images/game/icon_tab_select.png" alt="">

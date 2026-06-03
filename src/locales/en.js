@@ -223,6 +223,7 @@ export default {
     "static_state": "Static State",
     "direct_push": "Direct Push",
     "direct_acceleration": "Direct Acceleration",
+    "team_tier_difference": "Team Tier Difference",
     "team": "Team",
     "good_ordinary": "Good Ordinary",
     "all_dividend": "All Dividend",

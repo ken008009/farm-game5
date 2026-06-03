@@ -222,6 +222,7 @@ export default {
     "static_state": "静态",
     "direct_push": "直推",
     "direct_acceleration": "直推加速",
+    "team_tier_difference": "团队极差",
     "team": "团队",
     "good_ordinary": "平级",
     "all_dividend": "全网分红",
