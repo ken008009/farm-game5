@@ -132,30 +132,30 @@
           </div>
         </div>
         <div class="cont-num" v-if="tabSelect == 1">
-          <div class="item-num">
+          <!-- <div class="item-num">
             <span class="num">{{ parseInt(info.recommendTotalBiw) }}</span>
             <span class="name">{{ $t('performance') }}</span>
           </div>
           <div class="item-num">
             <span class="num">{{ parseInt(info.recommendTotalReward) }}</span>
             <span class="name">{{ $t('invite_git') }}</span>
-          </div>
+          </div> -->
         </div>
         <div class="cont-num cont-num-2" v-if="tabSelect == 2">
-          <div class="item-num">
+          <!-- <div class="item-num">
             <span class="num">{{ list.reduce((s, i) => s + (Number(i.amount) || 0), 0).toFixed(2) }}</span>
             <span class="name">{{ $t('usdt_income') }}</span>
           </div>
           <div class="item-num">
             <span class="num">{{ list.reduce((s, i) => s + (Number(i.ispayAmount) || 0), 0).toFixed(2) }}</span>
             <span class="name">{{ $t('ispay_income') }}</span>
-          </div>
+          </div> -->
         </div>
         <div class="cont-num cont-num-2" v-if="tabSelect == 3">
-          <div class="item-num">
+          <!-- <div class="item-num">
             <span class="num">{{ list.reduce((s, i) => s + (Number(i.amount) || 0), 0).toFixed(2) }}</span>
             <span class="name">{{ $t('usdt') }}</span>
-          </div>
+          </div> -->
         </div>
         <div class="cont-num" v-if="tabSelect == 4">
           <div class="item-num">
@@ -374,7 +374,7 @@
       </div>
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
-    <PopUserNeighbor v-if="showMore" :info="info" @close="closeMoreHandler"></PopUserNeighbor>
+    <PopUserNeighbor v-if="showMore" :info="info" :defaultTab="moreTabSelect" @close="closeMoreHandler"></PopUserNeighbor>
   </div>
 </template>
 
@@ -413,6 +413,7 @@ const address = ref('')
 const currLanguage = ref('')
 const currMusic = ref(0)
 const showMore = ref(false)
+const moreTabSelect = ref(1)
 const walletBalance = ref(0)
 const walletUSDTBalance = ref(0)
 
@@ -446,6 +447,7 @@ function switchLanguage(e) {
   currLanguage.value = e
 }
 function showMoreHandler() {
+  moreTabSelect.value = tabSelect.value
   showMore.value = true
 }
 function closeMoreHandler() {

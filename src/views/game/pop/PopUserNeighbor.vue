@@ -11,7 +11,17 @@
               <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
               <span class="tab-name" :class="[tabSelect == 1 ? 'select' : '']">{{ $t('neighbor') }}</span>
             </div>
-            <div class="item-tab tab-s" @click="switchTabHandler(2)">
+            <div class="item-tab" @click="switchTabHandler(2)">
+              <img class="tab-bg" v-if="tabSelect == 2" src="@/assets/images/game/icon_tab_select.png" alt="">
+              <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
+              <span class="tab-name" :class="[tabSelect == 2 ? 'select' : '']">{{ $t('team_tier_difference') }}</span>
+            </div>
+            <div class="item-tab" @click="switchTabHandler(3)">
+              <img class="tab-bg" v-if="tabSelect == 3" src="@/assets/images/game/icon_tab_select.png" alt="">
+              <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
+              <span class="tab-name" :class="[tabSelect == 3 ? 'select' : '']">{{ $t('team_recharge') }}</span>
+            </div>
+            <!-- <div class="item-tab tab-s" @click="switchTabHandler(2)">
               <img class="tab-bg" v-if="tabSelect == 2" src="@/assets/images/game/icon_tab_select.png" alt="">
               <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
               <span class="tab-name" :class="[tabSelect == 2 ? 'select' : '']">L1</span>
@@ -20,43 +30,39 @@
               <img class="tab-bg" v-if="tabSelect == 3" src="@/assets/images/game/icon_tab_select.png" alt="">
               <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
               <span class="tab-name" :class="[tabSelect == 3 ? 'select' : '']">L2</span>
-            </div>
-            <div class="item-tab tab-s" @click="switchTabHandler(4)">
+            </div> -->
+            <!-- <div class="item-tab tab-s" @click="switchTabHandler(4)">
               <img class="tab-bg" v-if="tabSelect == 4" src="@/assets/images/game/icon_tab_select.png" alt="">
               <img class="tab-bg" v-else src="@/assets/images/game/icon_tab.png" alt="">
               <span class="tab-name" :class="[tabSelect == 4 ? 'select' : '']">L3</span>
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="cont-num" v-if="tabSelect == 1">
-          <div class="item-num">
+          <!-- <div class="item-num">
             <span class="num">{{ parseInt(info.recommendTotalBiw) }}</span>
             <span class="name">{{ $t('performance') }}</span>
           </div>
           <div class="item-num">
             <span class="num">{{ parseInt(info.recommendTotalReward) }}</span>
             <span class="name">{{ $t('invite_git') }}</span>
-          </div>
+          </div> -->
         </div>
-        <div class="cont-num" v-if="tabSelect == 2">
-          <div class="item-num">
-            <span class="num">{{ parseInt(info.recommendTotalBiwOne) }}</span>
-            <span class="name">L1{{ $t('performance') }}</span>
+        <div class="cont-num cont-num-2" v-if="tabSelect == 2">
+          <!-- <div class="item-num">
+            <span class="num">{{ list.reduce((s, i) => s + (Number(i.amount) || 0), 0).toFixed(2) }}</span>
+            <span class="name">{{ $t('usdt_income') }}</span>
           </div>
           <div class="item-num">
-            <span class="num">{{ parseInt(info.recommendTotalRewardOne) }}</span>
-            <span class="name">L1{{ $t('invite_git') }}</span>
-          </div>
+            <span class="num">{{ list.reduce((s, i) => s + (Number(i.ispayAmount) || 0), 0).toFixed(2) }}</span>
+            <span class="name">{{ $t('ispay_income') }}</span>
+          </div> -->
         </div>
-        <div class="cont-num" v-if="tabSelect == 3">
-          <div class="item-num">
-            <span class="num">{{ parseInt(info.recommendTotalBiwTwo) }}</span>
-            <span class="name">L2{{ $t('performance') }}</span>
-          </div>
-          <div class="item-num">
-            <span class="num">{{ parseInt(info.recommendTotalRewardTwo) }}</span>
-            <span class="name">L2{{ $t('invite_git') }}</span>
-          </div>
+        <div class="cont-num cont-num-2" v-if="tabSelect == 3">
+          <!-- <div class="item-num">
+            <span class="num">{{ list.reduce((s, i) => s + (Number(i.amount) || 0), 0).toFixed(2) }}</span>
+            <span class="name">{{ $t('usdt') }}</span>
+          </div> -->
         </div>
         <div class="cont-num" v-if="tabSelect == 4">
           <div class="item-num">
@@ -68,10 +74,23 @@
             <span class="name">L3{{ $t('invite_git') }}</span>
           </div>
         </div>
+        
         <div class="cont-title" v-if="tabSelect == 1">
           <span class="menu2">{{ $t('address') }}</span>
           <span class="menu2">{{ $t('time') }}</span>
           <span class="menu1">{{ $t('level') }}</span>
+        </div>
+        <div class="cont-title" v-else-if="tabSelect == 2">
+          <span class="menu2">{{ $t('address_short') }}</span>
+          <span class="menu2">{{ $t('date') }}</span>
+          <span class="menu1">{{ $t('level2') }}</span>
+          <span class="menu1">{{ $t('usdt') }}</span>
+          <span class="menu1">{{ $t('ispay') }}</span>
+        </div>
+        <div class="cont-title" v-else-if="tabSelect == 3">
+          <span class="menu2">{{ $t('address_short') }}</span>
+          <span class="menu2">{{ $t('date') }}</span>
+          <span class="menu1">{{ $t('usdt') }}</span>
         </div>
         <div class="cont-title" v-else>
           <span class="menu2">{{ $t('address') }}</span>
@@ -80,16 +99,32 @@
         </div>
         <div class="list-income" v-if="tabSelect == 1">
           <div class="item-income" v-for="(item, index) in list">
-            <span class="num2 ellipsis2">{{ item.address }}</span>
+            <span class="num2 ellipsis2">{{ maskString(item.address) }}</span>
             <span class="num2">{{ item.createdAt }}</span>
             <span class="num1">{{ item.level }}</span>
           </div>
         </div>
-        <div class="list-income" v-if="tabSelect != 1">
+        <div class="list-income" v-else-if="tabSelect == 2">
           <div class="item-income" v-for="(item, index) in list">
-            <span class="num2 ellipsis2">{{ item.address }}</span>
+            <span class="num2 ellipsis2">{{ maskString(item.address) }}</span>
             <span class="num2">{{ item.createdAt }}</span>
-            <span class="num1">{{ item.amount }}</span>
+            <span class="num1">{{ item.vip }}</span>
+            <span class="num1">{{ toFixed4(item.amount) }}</span>
+            <span class="num1">{{ toFixed4(item.ispayAmount) }}</span>
+          </div>
+        </div>
+        <div class="list-income" v-else-if="tabSelect == 3">
+          <div class="item-income" v-for="(item, index) in list">
+            <span class="num2 ellipsis2">{{ maskString(item.address) }}</span>
+            <span class="num2">{{ item.createdAt }}</span>
+            <span class="num1">{{ toFixed4(item.amount) }}</span>
+          </div>
+        </div>
+        <div class="list-income" v-else>
+          <div class="item-income" v-for="(item, index) in list">
+            <span class="num2 ellipsis2">{{ maskString(item.address) }}</span>
+            <span class="num2">{{ item.createdAt }}</span>
+            <span class="num1">{{ toFixed4(item.amount) }}</span>
           </div>
         </div>
         <div class="cont-bottom">
@@ -107,6 +142,7 @@
 
 <script setup>
 import { ref, reactive, computed, onMounted, onUnmounted } from 'vue';
+import { maskString, toFixed4 } from '@/utils/util';
 import { userModel } from '@/api/model/userModel';
 import { gameModel } from '@/api/model/gameModel';
 import { useLanguageStore } from '@/stores/languageStore';
@@ -122,13 +158,17 @@ const props = defineProps({
   info: {
     type: Object,
     required: true
+  },
+  defaultTab: {
+    type: Number,
+    default: 1
   }
 })
 
 const languageStore = useLanguageStore()
 const step = ref(1)
 const list = ref([])
-const tabSelect = ref(1)
+const tabSelect = ref(props.defaultTab)
 const withdrawMode = ref(true)
 const amt = ref('')
 const currLanguage = ref('')
@@ -190,6 +230,8 @@ function submitHandler() {
 function switchModeHandler() {
   // withdrawMode.value = !withdrawMode.value
 }
+function showMoreHandler() {
+}
 function showWithdrawHandler() {
   step.value = 2
 }
@@ -220,9 +262,9 @@ async function getList(page) {
   if (tabSelect.value == 1) {
     res = await gameModel.userRecommend(page)
   } else if (tabSelect.value == 2) {
-    res = await gameModel.userRecommendL(1, page)
+    res = await gameModel.userRewardList(page)
   } else if (tabSelect.value == 3) {
-    res = await gameModel.userRecommendL(2, page)
+    res = await gameModel.userTeamDepositList(page)
   } else if (tabSelect.value == 4) {
     res = await gameModel.userRecommendL(3, page)
   }

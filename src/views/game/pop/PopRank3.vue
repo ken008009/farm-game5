@@ -60,16 +60,16 @@
         <!-- 昨日全网提现金额   前日全网提现金额   今日全网提现金额 -->
         <div class="cont-summary">
           <div class="item-summary">
+            <span class="label">{{ $t('today_withdrawal') }}:</span>
+            <span class="num">{{ toFixed4(info.newSix || 0) }}</span>
+          </div>
+          <div class="item-summary">
             <span class="label">{{ $t('yesterday_withdrawal') }}:</span>
             <span class="num">{{ toFixed4(info.newFour || 0) }}</span>
           </div>
           <div class="item-summary">
             <span class="label">{{ $t('previous_day_withdrawal') }}:</span>
             <span class="num">{{ toFixed4(info.newFive || 0) }}</span>
-          </div>
-          <div class="item-summary">
-            <span class="label">{{ $t('today_withdrawal') }}:</span>
-            <span class="num">{{ toFixed4(info.newSix || 0) }}</span>
           </div>
         </div>
 
