@@ -13,13 +13,9 @@
     <span class="timer" v-if="(myLandInfo.myGrowStatus == 1) && myLandInfo.countdown">{{ myLandInfo.countdown }}</span>
     <span class="addr" v-if="myLandInfo.isShowAddr">{{ maskString3(myLandInfo.landUserAddress) }}</span>
 
-    <div class="plant-status" v-if="myLandInfo.hasPlant && (!getCanLand())">
-      <div class="other-status" v-if="(getCanPlayShovel())">
-        <div class="plant-chan">
-          <img class="icon-chanzi" src="@/assets/images/game/goods_15.png" alt="">
-        </div>
-      </div>      
-      <div class="my-status" v-else-if="myLandInfo.isPlantOwner">
+    <!-- 植物主人：优先显示收获/维护状态 -->
+    <div class="plant-status" v-if="myLandInfo.hasPlant && myLandInfo.isPlantOwner">
+      <div class="my-status">
         <div class="plant-receive" v-if="myLandInfo.myGrowStatus == 2">
           <img class="icon-get" src="@/assets/images/game/icon_plant_get.png" alt="">
           <span class="num">{{ toFixed2(myLandInfo.reward) }}</span>
@@ -31,22 +27,26 @@
           <img class="icon-chong" src="@/assets/images/game/icon_chongzi.png" alt="">
         </div>
       </div>
-      <div class="other-status" v-else>
-        <div class="plant-tou" v-if="myLandInfo.myGrowStatus == 2">
-          <img class="icon-shou" src="@/assets/images/game/goods_13.png" alt="">
-        </div>
-        <!-- <div class="plant-chan" v-if="myLandInfo.myGrowStatus == 2 || myLandInfo.myGrowStatus == 3">
-          <img class="icon-chanzi" src="@/assets/images/game/goods_15.png" alt="">
-        </div> -->
-      </div>
     </div>
-    <div class="plant-status" v-if="myLandInfo.hasPlant && (getCanLand())">
-      <div class="other-status" v-if="(getCanPlayShovel())">
+    <!-- 铲子展示：非植物主人，不受 getCanLand() 限制 -->
+    <div class="plant-status" v-else-if="myLandInfo.hasPlant && getCanPlayShovel()">
+      <div class="other-status">
         <div class="plant-chan">
           <img class="icon-chanzi" src="@/assets/images/game/goods_15.png" alt="">
         </div>
-      </div>            
-      <div class="my-status" v-else-if="myLandInfo.isLandOwner">
+      </div>
+    </div>
+    <!-- 无全局权限时的其他状态 -->
+    <div class="plant-status" v-else-if="myLandInfo.hasPlant && (!getCanLand())">
+      <div class="other-status">
+        <div class="plant-tou" v-if="myLandInfo.myGrowStatus == 2">
+          <img class="icon-shou" src="@/assets/images/game/goods_13.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- 有全局权限时的其他状态 -->
+    <div class="plant-status" v-else-if="myLandInfo.hasPlant && (getCanLand())">
+      <div class="my-status" v-if="myLandInfo.isLandOwner">
         <div class="plant-receive" v-if="myLandInfo.myGrowStatus == 2">
           <img class="icon-get" src="@/assets/images/game/icon_plant_get.png" alt="">
           <span class="num">{{ toFixed2(myLandInfo.reward) }}</span>
@@ -66,7 +66,6 @@
         <div class="plant-tou" v-if="myLandInfo.myGrowStatus == 2">
           <img class="icon-shou" src="@/assets/images/game/goods_13.png" alt="">
         </div>
-
       </div>
     </div>
     <div class="cont-ani">
@@ -163,6 +162,10 @@ const props = defineProps({
   action: {
     type: Object,
     required: true
+  },
+  canPlaySix: {
+    type: String,
+    default: '0'
   }
 })
 
@@ -191,10 +194,14 @@ const amount = ref('')
 
 let timer = null
 
-watch(() => props.landInfo, (newVal) => {
-  myLandInfo.value = calcMyInfo(newVal);
-  checkTimer()
-}, { immediate: true });
+watch(
+  () => [props.landInfo, props.canPlaySix],
+  ([landInfo]) => {
+    myLandInfo.value = calcMyInfo(landInfo);
+    checkTimer()
+  },
+  { immediate: true }
+);
 watch(() => props.closeOption, (newVal) => {
   closeOptionHandler(newVal)
 }, { immediate: false });
@@ -238,10 +245,17 @@ function clickHandler() {
   const info = myLandInfo.value
   console.log(info)
   // console.log(getCanPlayAdd())
-  if (getCanLand()) {
-    if (getCanPlayShovel()) {
-      sendUseShovelAction()
-    } else if ((!info.hasPlant) && (info.myLandStatus == 1)) {
+  // 植物主人优先维护/收获，非植物主人才走铲子
+  if (info.isPlantOwner && info.myPlantStatus == 2) {
+    sendUsePesticideAction()
+  } else if (info.isPlantOwner && info.myPlantStatus == 3) {
+    sendUseWaterAction()
+  } else if (info.isPlantOwner && info.myGrowStatus == 2) {
+    sendReceiveAction()
+  } else if (getCanPlayShovel()) {
+    sendUseShovelAction()
+  } else if (getCanLand()) {
+    if ((!info.hasPlant) && (info.myLandStatus == 1)) {
       showOptionAction(2)
     } else if ((!info.hasPlant) && (info.myLandStatus == 2) && (info.isLandOwner)) {
       showOptionAction(4)
@@ -262,9 +276,7 @@ function clickHandler() {
     }
   } else {
     if (info.isPlantOwner) {
-      if (getCanPlayShovel()) {
-        sendUseShovelAction()
-      } else if ((!info.hasPlant) && (info.myLandStatus == 1)) {
+      if ((!info.hasPlant) && (info.myLandStatus == 1)) {
         showOptionAction(2)
       } else if ((!info.hasPlant) && (info.myLandStatus == 2)) {
         showOptionAction(4)
@@ -349,10 +361,16 @@ function calcMyInfo(lastInfo) {
   info['myPlantStatus'] = getMyPlantStatus(info)
   info['countdown'] = getCountdownStr(info)
 
+  // 使用 user_info 接口返回的 canPlaySix（全局），覆盖地块数据中的
+  info['canPlaySix'] = props.canPlaySix || '0'
+
   return info
 }
 
 function getCanPlayShovel() {
+  if (myLandInfo.value.isPlantOwner) {
+    return false
+  }
   let flag = myLandInfo.value.canPlaySix == '1' || myLandInfo.value.canPlaySix == 1
   flag = flag && myLandInfo.value.myGrowStatus == 2
   return flag

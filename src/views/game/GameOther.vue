@@ -15,6 +15,7 @@
       <div class="land-position">
         <div v-for="(land, index) in landList" :key="index" class="land-plot" :style="getPlotStyle(index)">
           <Land :closeOption="closeMenuAction" :action="landAction" :land-info="land" :curr-addr="currAddr" :location="index + 1"
+            :can-play-six="userInfo.canPlaySix"
             @success="landActionHandler" @close="closeOtherMenuHandler" />
         </div>
       </div>
