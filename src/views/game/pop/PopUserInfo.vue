@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop" @click="notDo()">
     <div class="cont-rank" @click="notDo()" v-if="step == 1">
-      <img class="bg" :src="$t('image_game.bg_user_info')" alt="">
+      <div class="login-panel login-panel--w310 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_user_info') }}</span>
       <div class="cont-info">
         <div class="cont-user">
           <div class="cont-avatar">
@@ -227,7 +228,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-pop" @click="notDo()" v-if="step == 2">
-      <img class="bg" :src="$t('image_game.bg_balance')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_balance') }}</span>
       <div class="cont-info">
         <span class="switch" v-if="!withdrawMode" @click="switchToUSDTHandler()">切换USDT</span>
         <span class="btn-confirm" v-if="withdrawMode" @click="switchModeHandler()">{{ $t('game') }} → {{ $t('wallet')
@@ -244,7 +246,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-pop" @click="notDo()" v-if="step == 4">
-      <img class="bg" :src="$t('image_game.bg_balance')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_balance') }}</span>
       <div class="cont-info">
         <span class="btn-confirm">{{ $t('wallet') }} → {{ $t('game') }}</span>
         <span class="balance">{{ $t('wallet_balance') }}:{{ walletUSDTBalance }}USDT</span>
@@ -257,7 +260,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <!-- <div class="cont-pop" @click="notDo()" v-if="step == 6">
-      <img class="bg" :src="$t('image_game.bg_balance')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_balance') }}</span>
       <div class="cont-info">
         <span class="btn-confirm">{{ $t('wallet') }} → {{ $t('game') }}</span>
         <span class="balance">{{ $t('wallet_balance') }}:{{ walletUSDTBalance }}USDT</span>
@@ -270,7 +274,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div> -->
     <div class="cont-pop" @click="notDo()" v-if="step == 6">
-      <img class="bg" :src="$t('image_game.bg_balance')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_balance') }}</span>
       <div class="cont-info">
         <span class="btn-confirm">{{ $t('game') }} → {{ $t('wallet') }}</span>
         <span class="balance">{{ $t('game_balance') }}:{{ toFixed4(info.usdt) }}USDT</span>
@@ -284,7 +289,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-pop" @click="notDo()" v-if="step == 7">
-      <img class="bg" :src="$t('image_game.bg_balance')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_balance') }}</span>
       <div class="cont-info">
         <span class="btn-confirm">{{ $t('game') }} → {{ $t('wallet') }}</span>
         <span class="balance">{{ $t('game_balance') }}:{{ toFixed4(info.gitNewNew) }}ISPAY</span>
@@ -300,7 +306,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-pop" @click="notDo()" v-if="step == 8">
-      <img class="bg" :src="$t('image_game.bg_balance')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_balance') }}</span>
       <div class="cont-info">
         <span class="btn-confirm">{{ $t('wallet') }} → {{ $t('game') }}</span>
         <span class="balance">{{ $t('wallet_balance') }}:{{ walletBalance }}ISPAY</span>
@@ -313,7 +320,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div> 
     <div class="cont-pop" @click="notDo()" v-if="step == 9">
-      <img class="bg" :src="$t('image_game.bg_balance')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_balance') }}</span>
       <div class="cont-info">
         <!-- <span class="btn-confirm">{{ $t('game') }} → {{ $t('wallet') }}</span> -->
         <span class="balance">{{ $t('game_balance') }}:{{ toFixed4(info.usdt) }}USDT</span>
@@ -330,7 +338,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>       
     <div class="cont-pop" @click="notDo()" v-if="step == 5">
-      <img class="bg" :src="$t('image_game.bg_balance')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_balance') }}</span>
       <div class="cont-info">
         <span class="switch" @click="switchToBIWHandler()">切换ISPAY</span>
         <span class="btn-confirm">{{ $t('wallet') }} → {{ $t('game') }}</span>
@@ -345,7 +354,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-setting" @click="notDo()" v-if="step == 3">
-      <img class="bg" :src="$t('image_game.bg_setting')" alt="">
+      <div class="login-panel login-panel--w300 login-panel--h520" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('setting') }}</span>
       <div class="cont-info">
         <div class="cont-language">
           <span class="language">{{ $t('music') }}:</span>
@@ -360,13 +370,16 @@
         </div>
         <div class="cont-language">
           <span class="language">{{ $t('language') }}:</span>
-          <div class="cont-zh" @click="switchLanguage('en')">
-            <span class="point" :class="[currLanguage == 'en' ? 'select' : '']"></span>
-            <span class="name">English</span>
-          </div>
-          <div class="cont-zh" @click="switchLanguage('zh')">
-            <span class="point" :class="[currLanguage == 'zh' ? 'select' : '']"></span>
-            <span class="name">中文</span>
+          <div class="cont-lang-list">
+            <div
+              class="cont-zh"
+              v-for="item in languageOptions"
+              :key="item.code"
+              @click="switchLanguage(item.code)"
+            >
+              <span class="point" :class="[currLanguage == item.code ? 'select' : '']"></span>
+              <span class="name">{{ item.label }}</span>
+            </div>
           </div>
         </div>
         <span class="btn-confirm" @click="submitSettingHandler()">{{ $t('determine') }}</span>
@@ -391,9 +404,11 @@ import { showToast } from 'vant';
 import { useI18n } from 'vue-i18n';
 import { getCurrentInstance } from 'vue';
 import PopUserNeighbor from './PopUserNeighbor.vue';
+import { LANGUAGE_OPTIONS } from '@/locales/languages';
 
 const { proxy } = getCurrentInstance();
 const { t } = useI18n()
+const languageOptions = LANGUAGE_OPTIONS
 
 const props = defineProps({
   info: {
@@ -779,10 +794,6 @@ async function toTransfer(amount, address) {
   .cont-rank {
     position: relative;
 
-    .bg {
-      width: 310px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -793,7 +804,7 @@ async function toTransfer(amount, address) {
 
     .cont-info {
       position: absolute;
-      top: 40px;
+      top: 20px;
       left: 0;
       right: 0;
       display: flex;
@@ -1189,10 +1200,6 @@ async function toTransfer(amount, address) {
   .cont-pop {
     position: relative;
 
-    .bg {
-      width: 320px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -1203,7 +1210,7 @@ async function toTransfer(amount, address) {
 
     .cont-info {
       position: absolute;
-      top: 50px;
+      top: 20px;
       left: 0;
       right: 0;
       display: flex;
@@ -1293,10 +1300,6 @@ async function toTransfer(amount, address) {
   .cont-setting {
     position: relative;
 
-    .bg {
-      width: 300px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -1307,7 +1310,7 @@ async function toTransfer(amount, address) {
 
     .cont-info {
       position: absolute;
-      top: 30px;
+      top: 20px;
       left: 0;
       right: 0;
       display: flex;
@@ -1317,16 +1320,29 @@ async function toTransfer(amount, address) {
         display: flex;
         margin-left: 40px;
         margin-top: 30px;
+        align-items: flex-start;
+        gap: 8px 10px;
+        flex-wrap: wrap;
 
         .language {
           font-size: 16px;
           margin-right: 4px;
+          flex-shrink: 0;
+          line-height: 22px;
+        }
+
+        .cont-lang-list {
+          display: flex;
+          flex-wrap: wrap;
+          flex: 1;
+          max-width: 280px;
+          gap: 8px 10px;
         }
 
         .cont-zh {
           display: flex;
           align-items: center;
-          margin-right: 10px;
+          margin-right: 0;
 
           .point {
             width: 15px;
@@ -1360,7 +1376,7 @@ async function toTransfer(amount, address) {
         border-radius: 4px;
         align-self: center;
         box-sizing: border-box;
-        margin-top: 60px;
+        margin-top: 24px;
         color: #000;
         font-weight: bold;
       }

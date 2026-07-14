@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop" @click="notDo()">
     <div class="cont-pop" @click="notDo()" v-if="step == 1">
-      <img class="bg" :src="$t('image_game.bg_seed')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('menu_label_seed') }}</span>
       <div class="cont-info">
         <div class="cont-top">
           <img class="bg-top" src="@/assets/images/game/bg_pink.png" alt="">
@@ -34,7 +35,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-staking" @click="notDo()" v-if="step == 2">
-      <img class="bg" :src="$t('image_game.bg_staking_pledge')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pledge') }}</span>
       <div class="cont-info">
         <div class="cont-input">
           <input class="input-num" v-model="amt1" maxlength="18" type="number" :placeholder="$t('please_enter_the_amount')">
@@ -45,7 +47,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="showHomeHandler()" alt="">
     </div>
     <div class="cont-staking" @click="notDo()" v-if="step == 3">
-      <img class="bg" :src="$t('image_game.bg_redemption')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('redemption') }}</span>
       <div class="cont-info">
         <div class="cont-input">
           <input class="input-num" v-model="amt2" maxlength="18" type="number" :placeholder="$t('please_enter_the_amount')">
@@ -57,7 +60,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="showHomeHandler()" alt="">
     </div>
     <div class="cont-staking" @click="notDo()" v-if="step == 4">
-      <img class="bg" :src="$t('image_game.bg_start_game')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('start_game') }}</span>
       <div class="cont-info">
         <div class="cont-input">
           <input class="input-num" v-model="amt3" maxlength="18" type="number" :placeholder="$t('please_enter_the_amount')">
@@ -68,7 +72,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="showHomeHandler()" alt="">
     </div>
     <div class="cont-result" @click="notDo()" v-if="step == 5">
-      <img class="bg" :src="$t('image_game.bg_result')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_result') }}</span>
       <div class="cont-info">
         <div class="cont-success" v-if="gameRes.playStatus == '1'">
           <img class="icon-success" src="@/assets/images/game/icon_success.png" alt="">
@@ -229,10 +234,6 @@ async function game() {
 
   .cont-pop {
     position: relative;
-
-    .bg {
-      width: 320px;
-    }
 
     .icon-close {
       width: 30px;
@@ -405,10 +406,6 @@ async function game() {
   .cont-staking {
     position: relative;
 
-    .bg {
-      width: 320px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -490,10 +487,6 @@ async function game() {
 
   .cont-result {
     position: relative;
-
-    .bg {
-      width: 320px;
-    }
 
     .icon-close {
       width: 30px;

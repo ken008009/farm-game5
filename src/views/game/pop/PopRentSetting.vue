@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop" @click="notDo()">
     <div class="cont-pop" @click="notDo()" v-if="true">
-      <img class="bg" :src="$t('image_game.bg_rent_setting')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_rent') }}</span>
       <div class="cont-info">
         <span class="id">ID:#{{ id }}</span>
         <div class="cont-rate">
@@ -86,10 +87,6 @@ function notDo() {
 
   .cont-pop {
     position: relative;
-
-    .bg {
-      width: 320px;
-    }
 
     .icon-close {
       width: 30px;

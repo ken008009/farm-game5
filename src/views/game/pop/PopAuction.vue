@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop" @click="notDo()">
     <div class="cont-pop" @click="notDo()" v-if="step == 1">
-      <img class="bg" src="@/assets/images/game/bg_common.png" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h600" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('menu_label_auction') }}</span>
       <div class="cont-info" v-if="landInfo.level && landInfo.level != '0'">
         <div class="cont-goods">
           <img class="img-goods" :src="getLandImage(landInfo.level)" alt="">
@@ -53,7 +54,7 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-staking" @click="notDo()" v-if="step == 2">
-      <img class="bg" src="@/assets/images/game/bg_common.png" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h320" aria-hidden="true"></div>
       <div class="cont-info">
         <div class="cont-input">
           <input class="input-num" v-model="amt1" maxlength="18" type="number"
@@ -242,7 +243,7 @@ async function buy() {
 
     .cont-info {
       position: absolute;
-      top: 30px;
+      top: 20px;
       left: 0;
       right: 0;
       display: flex;
@@ -494,10 +495,6 @@ async function buy() {
 
   .cont-result {
     position: relative;
-
-    .bg {
-      width: 320px;
-    }
 
     .icon-close {
       width: 30px;

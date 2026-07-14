@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop" @click="notDo()">
     <div class="cont-rank" @click="notDo()" v-if="step == 1">
-      <img class="bg" :src="$t('image_game.bg_user_info')" alt="">
+      <div class="login-panel login-panel--w310 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_user_info') }}</span>
       <div class="cont-info">
         <div class="cont-tab">
           <div class="line"></div>
@@ -302,10 +303,6 @@ async function toWithdraw(amount) {
   .cont-rank {
     position: relative;
 
-    .bg {
-      width: 310px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -316,7 +313,7 @@ async function toWithdraw(amount) {
 
     .cont-info {
       position: absolute;
-      top: 40px;
+      top: 20px;
       left: 0;
       right: 0;
       display: flex;
@@ -677,10 +674,6 @@ async function toWithdraw(amount) {
   .cont-pop {
     position: relative;
 
-    .bg {
-      width: 320px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -769,10 +762,6 @@ async function toWithdraw(amount) {
 
   .cont-setting {
     position: relative;
-
-    .bg {
-      width: 300px;
-    }
 
     .icon-close {
       width: 30px;

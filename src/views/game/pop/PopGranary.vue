@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop" @click="notDo()">
     <div class="cont-pop" @click="notDo()" v-show="step == 1">
-      <img class="bg" :src="$t('image_game.bg_granary')" alt="">
+      <div class="login-panel login-panel--w300 login-panel--h520" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('menu_label_granary') }}</span>
       <div class="cont-info">
         <img class="icon-rule" @click="showIncomeHandler()" src="@/assets/images/game/icon_rule2.png" alt="">
         <div class="cont-num">
@@ -47,7 +48,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-redemption" @click="notDo()" v-show="step == 2">
-      <img class="bg" :src="$t('image_game.bg_income')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_income') }}</span>
       <div class="cont-info">
         <div class="cont-list">
           <div class="cont-title">
@@ -73,7 +75,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="showHomeHandler()" alt="">
     </div>
     <div class="cont-income" @click="notDo()" v-show="step == 3">
-      <img class="bg" :src="$t('image_game.bg_income')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_income') }}</span>
       <div class="cont-list">
         <div class="cont-title">
           <span class="menu">{{ $t('date') }}</span>
@@ -96,7 +99,7 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="showHomeHandler()" alt="">
     </div>
     <div class="cont-record" @click="notDo()" v-show="step == 4">
-      <img class="bg" src="@/assets/images/game/bg_common.png" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
       <div class="cont-list">
         <div class="cont-menu">
           <span class="menu">{{ $t('total_order') }}: <br>{{ listInfo.myCount }}</span>
@@ -365,10 +368,6 @@ async function redemGit(id) {
   .cont-pop {
     position: relative;
 
-    .bg {
-      width: 300px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -379,7 +378,7 @@ async function redemGit(id) {
 
     .cont-info {
       position: absolute;
-      top: 40px;
+      top: 20px;
       left: 0;
       right: 0;
       display: flex;
@@ -514,10 +513,6 @@ async function redemGit(id) {
   .cont-redemption {
     position: relative;
 
-    .bg {
-      width: 320px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -536,7 +531,7 @@ async function redemGit(id) {
 
       .cont-list {
         position: absolute;
-        top: 40px;
+        top: 20px;
         left: 0;
         right: 0;
         display: flex;
@@ -681,10 +676,6 @@ async function redemGit(id) {
   .cont-income {
     position: relative;
 
-    .bg {
-      width: 300px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -695,7 +686,7 @@ async function redemGit(id) {
 
     .cont-list {
       position: absolute;
-      top: 40px;
+      top: 20px;
       left: 0;
       right: 0;
       display: flex;
@@ -764,10 +755,6 @@ async function redemGit(id) {
   }
   .cont-record {
     position: relative;
-
-    .bg {
-      width: 300px;
-    }
 
     .icon-close {
       width: 30px;

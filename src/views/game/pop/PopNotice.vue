@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop">
     <div class="cont-pop" @click="notDo()">
-      <img class="bg" :src="$t('image_game.bg_notice')" alt="">
+      <div class="login-panel login-panel--w300 login-panel--h520" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('menu_label_notice') }}</span>
       <div class="list-notice">
         <div class="item-notice" v-for="(item, index) in list">
           <div class="cont-title">
@@ -94,10 +95,6 @@ async function getList(page) {
   .cont-pop {
     position: relative;
 
-    .bg {
-      width: 300px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -108,7 +105,7 @@ async function getList(page) {
 
     .list-notice {
       position: absolute;
-      top: 50px;
+      top: 20px;
       left: 0;
       right: 0;
       height: 440px;

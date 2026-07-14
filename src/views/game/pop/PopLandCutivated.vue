@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop">
     <div class="cont-detail" @click="notDo()" v-show="step == 1">
-      <img class="bg" :src="$t('image_game.bg_cultivated')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('cultivate_land') }}</span>
       <div class="land-detail">
         <span class="land-id">#{{ landInfo.id }}</span>
         <div class="cont-img">
@@ -125,10 +126,6 @@ async function raiseLand() {
 
   .cont-detail {
     position: relative;
-
-    .bg {
-      width: 320px;
-    }
 
     .icon-close {
       width: 30px;

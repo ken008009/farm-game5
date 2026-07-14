@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop" @click="notDo()">
     <div class="cont-pop" @click="notDo()">
-      <img class="bg" src="@/assets/images/game/bg_common.png" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h600" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('notice') }}</span>
       <div class="cont-info" v-if="noticeList.length > 0">
         <div class="title">{{ $t('notice') }}</div>
         <div class="detail">{{isZh? noticeList[page-1].content:noticeList[page-1].contentTwo}}</div>
@@ -108,7 +109,7 @@ function notDo() { }
       width: 320px;
       height: 600px;      
       position: absolute;
-      top: 30px;
+      top: 20px;
       left: 0;
       right: 0;
       display: flex;
@@ -375,10 +376,6 @@ function notDo() { }
 
   .cont-result {
     position: relative;
-
-    .bg {
-      width: 320px;
-    }
 
     .icon-close {
       width: 30px;

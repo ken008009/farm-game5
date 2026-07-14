@@ -91,18 +91,42 @@
       </div>
     </div>       
     <div class="cont-right animated " :class="[showMenu ? 'fadeInRight' : 'fadeOutRight']">
-      <img class="icon" @click="switchNoticeHandler()" :src="$t('image_game.menu_notice')" alt="">
-      <img class="icon" @click="switchUserSeedHandler()" :src="$t('image_game.menu_seed')" alt="">
-      <img class="icon" @click="switchUserGranaryHandler()" :src="$t('image_game.menu_granary')" alt="">
+      <div class="menu-item menu-1" @click="switchNoticeHandler()">
+        <img class="icon" src="@/assets/images/game/menu_1.png" alt="">
+        <span class="label">{{ $t('menu_label_notice') }}</span>
+      </div>
+      <div class="menu-item menu-2" @click="switchUserSeedHandler()">
+        <img class="icon" src="@/assets/images/game/menu_2.png" alt="">
+        <span class="label">{{ $t('menu_label_seed') }}</span>
+      </div>
+      <div class="menu-item menu-3" @click="switchUserGranaryHandler()">
+        <img class="icon" src="@/assets/images/game/menu_3.png" alt="">
+        <span class="label">{{ $t('menu_label_granary') }}</span>
+      </div>
+      <div class="menu-item menu-4" @click="switchUserBlindHandler()">
+        <img class="icon" src="@/assets/images/game/menu_4.png" alt="">
+        <span class="label">{{ $t('menu_label_blind') }}</span>
+      </div>
+      <div class="menu-item menu-5" @click="switchUserAuctionHandler()">
+        <img class="icon" src="@/assets/images/game/menu_5.png" alt="">
+        <span class="label">{{ $t('menu_label_auction') }}</span>
+      </div>
+      <div class="menu-item menu-6" @click="switchUserLandHandler()">
+        <img class="icon" src="@/assets/images/game/menu_6.png" alt="">
+        <span class="label">{{ $t('menu_label_land') }}</span>
+      </div>
+      <div class="menu-item menu-7" @click="switchUserStoreHandler()">
+        <img class="icon" src="@/assets/images/game/menu_7.png" alt="">
+        <span class="label">{{ $t('menu_label_store') }}</span>
+      </div>
+      <div class="menu-item menu-8" @click="switchUserMarketHandler()">
+        <img class="icon" src="@/assets/images/game/menu_8.png" alt="">
+        <span class="label">{{ $t('menu_label_market') }}</span>
+      </div>
       <!-- <img class="icon" @click="switchUserPledgeHandler()" :src="$t('image_game.menu_pledge')" alt=""> -->
       <!-- <img class="icon" @click="switchUserExchangeHandler()" :src="$t('image_game.menu_exchange')" alt=""> -->
       <!-- <img class="icon" @click="toUrlHandler()" :src="$t('image_game.menu_shop')" alt=""> -->
       <!-- <img class="icon" @click="toUrl2Handler()" :src="$t('image_game.menu_pay')" alt=""> -->
-      <img class="icon" @click="switchUserBlindHandler()" :src="$t('image_game.menu_blind')" alt="">
-      <img class="icon" @click="switchUserAuctionHandler()" :src="$t('image_game.menu_auction')" alt="">
-      <img class="icon" @click="switchUserLandHandler()" :src="$t('image_game.menu_land')" alt="">
-      <img class="icon" @click="switchUserStoreHandler()" :src="$t('image_game.menu_store')" alt="">
-      <img class="icon" @click="switchUserMarketHandler()" :src="$t('image_game.menu_market')" alt="">
     </div>
     <div v-if="false" class="cont-bottom animated" :class="[showMenu ? 'fadeInUp' : 'fadeOutDown']">
       <!-- <img class="icon" @click="switchUserBlindHandler()" :src="$t('image_game.menu_blind')" alt="">
@@ -124,10 +148,12 @@
 
     </div>
     <div class="cont-success" v-if="showLinkSuccess">
-      <img class="bg" :src="$t('image_game.bg_login3')" alt="">
-      <div class="cont-info">
-        <span class="addr">{{ address }}</span>
-        <span class="btn-confirm" @click="closeLinkHandler()">{{ $t('determine') }}</span>
+      <div class="login-panel login-panel--auto">
+        <span class="pop-title">{{ $t('pop_title_login_success') }}</span>
+        <div class="cont-info">
+          <span class="addr">{{ address }}</span>
+          <span class="btn-confirm" @click="closeLinkHandler()">{{ $t('determine') }}</span>
+        </div>
       </div>
     </div>
 
@@ -1117,8 +1143,51 @@ async function submitMessage() {
     flex-direction: column;
     align-items: center;
     position: absolute;
-    right: 20px;
-    top: 120px;
+    right: 12px;
+    top: 110px;
+
+    .menu-item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 8px;
+      cursor: pointer;
+
+      .icon {
+        height: 52px;
+        width: 52px;
+        object-fit: contain;
+        display: block;
+        margin-bottom: 0;
+      }
+
+      .label {
+        position: absolute;
+        left: 50%;
+        bottom: 2px;
+        transform: translateX(-50%);
+        font-size: 10px;
+        font-weight: 500;
+        color: #fff;
+        line-height: 1.3;
+        text-align: center;
+        white-space: nowrap;
+        letter-spacing: 0.2px;
+        paint-order: stroke fill;
+        -webkit-text-stroke: 3px currentColor;
+        pointer-events: none;
+      }
+    }
+
+    .menu-1 .label { -webkit-text-stroke-color: #7a4ab8; }
+    .menu-2 .label { -webkit-text-stroke-color: #3a6eb8; }
+    .menu-3 .label { -webkit-text-stroke-color: #6b4aa0; }
+    .menu-4 .label { -webkit-text-stroke-color: #c44a5e; }
+    .menu-5 .label { -webkit-text-stroke-color: #7a52b0; }
+    .menu-6 .label { -webkit-text-stroke-color: #8a5a30; }
+    .menu-7 .label { -webkit-text-stroke-color: #6a48a8; }
+    .menu-8 .label { -webkit-text-stroke-color: #6a5878; }
 
     .icon {
       height: 52px;
@@ -1228,22 +1297,15 @@ async function submitMessage() {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-
-    .bg {
-      width: 320px;
-      position: absolute;
-      top: 30%;
-      left: 30px;
-    }
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .cont-info {
-      position: absolute;
-      top: 30%;
-      left: 30px;
-      width: 320px;
       display: flex;
       flex-direction: column;
+      padding: 48px 20px 28px;
+      box-sizing: border-box;
 
       .addr {
         width: 250px;
@@ -1251,7 +1313,6 @@ async function submitMessage() {
         align-self: center;
         text-align: center;
         word-wrap: break-word;
-        margin-top: 80px;
       }
 
       .btn-confirm {

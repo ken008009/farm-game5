@@ -65,3 +65,56 @@
   display: flex;
   align-self: flex-end;
 }
+/* ========== 弹窗通用：标题 + 面板 ========== */
+
+/* 标题压在上边框 */
+.pop-title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-45%, -50%) skewX(-12deg);
+  z-index: 3;
+  padding: 0 4px;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  white-space: nowrap;
+  text-align: center;
+  color: #1a1208;
+  -webkit-text-stroke: 5px #f2d24a;
+  paint-order: stroke fill;
+  text-shadow:
+    0 1px 0 #e6c43a,
+    0 2px 2px rgba(0, 0, 0, 0.18);
+  pointer-events: none;
+}
+
+/* 弹窗面板（替代 bg_common / 本地化 bg_*） */
+.login-panel {
+  position: relative;
+  width: 320px;
+  min-height: 480px;
+  background-color: #feffe0;
+  border: 8px solid #ffdb4d;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+
+.login-panel--w300 { width: 300px; }
+.login-panel--w310 { width: 310px; }
+.login-panel--w320 { width: 320px; }
+.login-panel--w330 { width: 330px; }
+
+.login-panel--h140 { min-height: 140px; }
+.login-panel--h280 { min-height: 280px; }
+.login-panel--h320 { min-height: 320px; }
+.login-panel--h400 { min-height: 400px; }
+.login-panel--h480 { min-height: 480px; }
+.login-panel--h520 { min-height: 520px; }
+.login-panel--h540 { min-height: 540px; }
+.login-panel--h560 { min-height: 560px; }
+.login-panel--h600 { min-height: 600px; }
+
+/* 内容自适应高度（确认框 / 登录已改流式布局） */
+.login-panel--auto { min-height: 0; }

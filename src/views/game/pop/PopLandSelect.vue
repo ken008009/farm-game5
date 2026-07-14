@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop">
     <div class="cont-pop" @click="notDo()" v-show="step == 1">
-      <img class="bg" :src="$t('image_game.bg_land')" alt="">
+      <div class="login-panel login-panel--w330 login-panel--h560" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('land') }}</span>
       <div class="list-land">
         <div class="item-land" v-for="(item, index) in list" @click="showLandDetailHandler(item, index)">
           <div class="item-border"></div>
@@ -21,7 +22,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-detail" @click="notDo()" v-show="step == 2">
-      <img class="bg" :src="$t('image_game.bg_land2')" alt="">
+      <div class="login-panel login-panel--w300 login-panel--h520" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('land') }}</span>
       <div class="land-detail">
         <div class="cont-rule">
           <img class="icon-rule" src="@/assets/images/game/icon_rule.png" alt="">
@@ -153,10 +155,6 @@ async function getList(page) {
   .cont-pop {
     position: relative;
 
-    .bg {
-      width: 330px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -167,7 +165,7 @@ async function getList(page) {
 
     .list-land {
       position: absolute;
-      top: 50px;
+      top: 20px;
       left: 0;
       right: 0;
       max-height: 480px;
@@ -206,7 +204,7 @@ async function getList(page) {
           font-size: 12px;
           color: #000;
           position: absolute;
-          top: 50px;
+          top: 20px;
           left: 12px;
         }
 
@@ -274,10 +272,6 @@ async function getList(page) {
 
   .cont-detail {
     position: relative;
-
-    .bg {
-      width: 300px;
-    }
 
     .icon-close {
       width: 30px;

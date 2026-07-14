@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop" @click="notDo()">
     <div class="cont-pop" @click="notDo()" v-if="step === 1">
-      <img class="bg" :src="$t('image_game.bg_exchange')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('exchange') }}</span>
       <div class="cont-info">
         <div class="cont-switch">
           <!-- <span class="switch selected" @click="switchToBIWHandler()">ISPAY→ISPAY</span> -->
@@ -22,7 +23,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-pop" @click="notDo()" v-if="step === 2">
-      <img class="bg" :src="$t('image_game.bg_exchange')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('exchange') }}</span>
       <div class="cont-info">
         <div class="cont-switch">
           <!-- <span class="switch" @click="switchToBIWHandler()">ISPAY→ISPAY</span> -->
@@ -44,7 +46,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-pop" @click="notDo()" v-if="step === 3">
-      <img class="bg" :src="$t('image_game.bg_exchange')" alt="">
+      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('exchange') }}</span>
       <div class="cont-info">
         <div class="cont-switch">
           <!-- <span class="switch" @click="switchToBIWHandler()">ISPAY→ISPAY</span> -->
@@ -204,10 +207,6 @@ async function exchangeGit(amount, exchangeType) {
   .cont-pop {
     position: relative;
 
-    .bg {
-      width: 320px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -218,7 +217,7 @@ async function exchangeGit(amount, exchangeType) {
 
     .cont-info {
       position: absolute;
-      top: 50px;
+      top: 20px;
       left: 0;
       right: 0;
       display: flex;

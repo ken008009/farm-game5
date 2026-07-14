@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop">
     <div class="cont-pop" @click="notDo()" v-show="step == 1">
-      <img class="bg" :src="$t('image_game.bg_market')" alt="">
+      <div class="login-panel login-panel--w330 login-panel--h560" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('menu_label_market') }}</span>
       <div class="cont-tab">
         <div class="line"></div>
         <div class="list-tab">
@@ -146,7 +147,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-detail" @click="notDo()" v-if="step == 2">
-      <img class="bg" :src="$t('image_game.bg_market')" alt="">
+      <div class="login-panel login-panel--w330 login-panel--h560" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('menu_label_market') }}</span>
       <div class="store-detail">
         <span class="seed-id">#{{ currGoods.id }}</span>
         <div class="cont-img" v-if="currGoods.type == '1'">
@@ -206,7 +208,7 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="toHomeHadler()" alt="">
     </div>
     <div class="cont-submit" @click="notDo()" v-show="showSubmit">
-      <img class="bg" src="@/assets/images/game/bg_common.png" alt="">
+      <div class="login-panel login-panel--w300 login-panel--h140" aria-hidden="true"></div>
       <div class="cont-btn">
         <span class="btn-buy" @click="submitBuyHandler()">{{ $t('confirm') }}</span>
         <span class="btn-cancel" @click="cancelBuyHandler()">{{ $t('cancel') }}</span>
@@ -425,10 +427,6 @@ async function offGoods() {
   .cont-pop {
     position: relative;
 
-    .bg {
-      width: 330px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -439,7 +437,7 @@ async function offGoods() {
 
     .cont-tab {
       position: absolute;
-      top: 50px;
+      top: 20px;
       left: 35px;
       right: 0;
       width: 260px;
@@ -684,7 +682,7 @@ async function offGoods() {
           font-size: 12px;
           color: #000;
           position: absolute;
-          top: 50px;
+          top: 20px;
           left: 12px;
         }
 
@@ -860,7 +858,7 @@ async function offGoods() {
           font-size: 12px;
           color: #000;
           position: absolute;
-          top: 50px;
+          top: 20px;
           left: 12px;
         }
 
@@ -962,7 +960,7 @@ async function offGoods() {
           font-size: 12px;
           color: #000;
           position: absolute;
-          top: 50px;
+          top: 20px;
           left: 12px;
         }
 
@@ -1217,10 +1215,6 @@ async function offGoods() {
 
   .cont-detail {
     position: relative;
-
-    .bg {
-      width: 330px;
-    }
 
     .icon-close {
       width: 30px;

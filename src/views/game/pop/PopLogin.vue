@@ -1,7 +1,7 @@
 <template>
   <div class="bg-pop" @click="notDo()">
-    <div class="cont-login" @click="notDo()" v-if="step == 1">
-      <img class="bg" :src="$t('image_game.bg_login')" alt="">
+    <div class="cont-login login-panel login-panel--auto" @click="notDo()" v-if="step == 1">
+      <span class="pop-title">{{ $t('pop_title_login') }}</span>
       <div class="cont-info">
         <span class="notice">{{ $t('please_visit_the_game_in_the_following_wallet') }}</span>
         <!-- <img class="login-way" src="@/assets/images/game/icon_login_bsc.png" alt=""> -->
@@ -12,8 +12,8 @@
         <img class="login-way" @click="tpLoginHandler()" src="@/assets/images/game/icon_login_tp.png" alt="">
       </div>
     </div>
-    <div class="cont-link" @click="notDo()" v-if="step == 2">
-      <img class="bg" :src="$t('image_game.bg_login2')" alt="">
+    <div class="cont-link login-panel login-panel--auto" @click="notDo()" v-if="step == 2">
+      <span class="pop-title">{{ $t('pop_title_login_success') }}</span>
       <div class="cont-info">
         <span class="addr">{{ address }}</span>
         <span class="notice">{{ $t('please_set_your_neighbor') }}</span>
@@ -24,8 +24,8 @@
         <span class="btn-confirm" @click="bindAddrHandler()">{{ $t('determine') }}</span>
       </div>
     </div>
-    <div class="cont-success" @click="notDo()" v-if="step == 3">
-      <img class="bg" :src="$t('image_game.bg_login3')" alt="">
+    <div class="cont-success login-panel login-panel--auto" @click="notDo()" v-if="step == 3">
+      <span class="pop-title">{{ $t('pop_title_login_success') }}</span>
       <div class="cont-info">
         <span class="addr">{{ address }}</span>
         <span class="btn-confirm" @click="closeHandler()">{{ $t('determine') }}</span>
@@ -124,9 +124,6 @@ async function login() {
   .cont-login {
     position: relative;
 
-    .bg {
-      width: 320px;
-    }
 
     .icon-close {
       width: 30px;
@@ -137,19 +134,17 @@ async function login() {
     }
 
     .cont-info {
-      position: absolute;
-      top: 70px;
-      left: 0;
-      right: 0;
       display: flex;
       flex-direction: column;
+      padding: 40px 20px 28px;
+      box-sizing: border-box;
 
       .notice {
         font-size: 14px;
         font-weight: bold;
         align-self: center;
         color: #000;
-        margin-top: 20px;
+        margin-top: 8px;
         margin-bottom: 20px;
         width: 220px;
         word-wrap: break-word;
@@ -208,9 +203,6 @@ async function login() {
   .cont-link {
     position: relative;
 
-    .bg {
-      width: 320px;
-    }
 
     .icon-close {
       width: 30px;
@@ -221,12 +213,10 @@ async function login() {
     }
 
     .cont-info {
-      position: absolute;
-      top: 70px;
-      left: 0;
-      right: 0;
       display: flex;
       flex-direction: column;
+      padding: 40px 20px 28px;
+      box-sizing: border-box;
 
       .addr {
         width: 230px;
@@ -268,7 +258,7 @@ async function login() {
         font-size: 14px;
         align-self: center;
         color: #000;
-        margin-top: 80px;
+        margin-top: 16px;
       }
 
       .btn-confirm {
@@ -293,9 +283,6 @@ async function login() {
   .cont-success {
     position: relative;
 
-    .bg {
-      width: 320px;
-    }
 
     .icon-close {
       width: 30px;
@@ -306,12 +293,10 @@ async function login() {
     }
 
     .cont-info {
-      position: absolute;
-      top: 70px;
-      left: 0;
-      right: 0;
       display: flex;
       flex-direction: column;
+      padding: 40px 20px 28px;
+      box-sizing: border-box;
 
       .addr {
         width: 250px;

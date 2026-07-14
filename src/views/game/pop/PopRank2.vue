@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop" @click="notDo()">
     <div class="cont-income" @click="notDo()" v-if="true">
-      <img class="bg" :src="$t('image_game.bg_rank')" alt="">
+      <div class="login-panel login-panel--w310 login-panel--h600" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('pop_title_rank') }}</span>
       <div class="cont-list">
         <div class="cont-tab">
           <div class="line"></div>
@@ -174,10 +175,6 @@ async function getList(page) {
   .cont-income {
     position: relative;
 
-    .bg {
-      width: 310px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -188,7 +185,7 @@ async function getList(page) {
 
     .cont-list {
       position: absolute;
-      top: 40px;
+      top: 20px;
       left: 0;
       right: 0;
       display: flex;

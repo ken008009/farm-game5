@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop">
     <div class="cont-pop" @click="notDo()" v-show="step == 1">
-      <img class="bg" :src="$t('image_game.bg_store')" alt="">
+      <div class="login-panel login-panel--w330 login-panel--h560" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('menu_label_store') }}</span>
       <div class="list-seed" v-if="status == 1">
         <div class="item-seed" v-for="(item, index) in list" @click="showDetailHandler(item)">
           <div class="item-border">
@@ -39,7 +40,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-detail" @click="notDo()" v-show="step == 2">
-      <img class="bg" :src="$t('image_game.bg_store2')" alt="">
+      <div class="login-panel login-panel--w300 login-panel--h520" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('menu_label_store') }}</span>
       <div class="store-detail">
         <div class="cont-rule">
           <img class="icon-rule" src="@/assets/images/game/icon_rule.png" alt="">
@@ -199,10 +201,6 @@ async function getList(page = 1) {
   .cont-pop {
     position: relative;
 
-    .bg {
-      width: 330px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -213,7 +211,7 @@ async function getList(page = 1) {
 
     .cont-tab {
       position: absolute;
-      top: 50px;
+      top: 20px;
       left: 40px;
       right: 0;
       width: 250px;
@@ -266,7 +264,7 @@ async function getList(page = 1) {
 
     .list-seed {
       position: absolute;
-      top: 50px;
+      top: 20px;
       left: 0;
       right: 0;
       max-height: 450px;
@@ -337,7 +335,7 @@ async function getList(page = 1) {
 
     .list-tool {
       position: absolute;
-      top: 50px;
+      top: 20px;
       left: 0;
       right: 0;
       max-height: 450px;
@@ -474,10 +472,6 @@ async function getList(page = 1) {
 
   .cont-detail {
     position: relative;
-
-    .bg {
-      width: 300px;
-    }
 
     .icon-close {
       width: 30px;

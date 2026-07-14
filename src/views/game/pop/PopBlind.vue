@@ -1,7 +1,8 @@
 <template>
   <div class="bg-pop">
     <div class="cont-pop" @click="notDo()" v-show="step == 1">
-      <img class="bg" :src="$t('image_game.bg_blind')" alt="">
+      <div class="login-panel login-panel--w300 login-panel--h520" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('blind_box') }}</span>
       <div class="cont-blind">
         <img class="icon-blind" src="@/assets/images/game/icon_blind.png" alt="">
         <span class="blind-box">{{ $t('blind_box') }}</span>
@@ -41,7 +42,8 @@
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
     <div class="cont-success" @click="notDo()" v-show="step == 2">
-      <img class="bg" :src="$t('image_game.bg_blind2')" alt="">
+      <div class="login-panel login-panel--w330 login-panel--h560" aria-hidden="true"></div>
+      <span class="pop-title">{{ $t('blind_box') }}</span>
       <div class="cont-blind">
         <img class="icon-success" src="@/assets/images/game/icon_success.png" alt="">
         <div class="cont-notice">
@@ -55,7 +57,7 @@
       </div>
     </div>
     <div class="cont-submit" @click="notDo()" v-show="showSubmit">
-      <img class="bg" src="@/assets/images/game/bg_common.png" alt="">
+      <div class="login-panel login-panel--w300 login-panel--h140" aria-hidden="true"></div>
       <div class="cont-btn">
         <span class="btn-buy" @click="buyBoxHandler()">{{ $t('confirm') }}</span>
         <span class="btn-cancel" @click="cancelBuyHandler()">{{ $t('cancel') }}</span>
@@ -181,10 +183,6 @@ async function buyBlindBox() {
   .cont-pop {
     position: relative;
 
-    .bg {
-      width: 300px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -195,7 +193,7 @@ async function buyBlindBox() {
 
     .cont-blind {
       position: absolute;
-      top: 50px;
+      top: 20px;
       left: 0;
       right: 0;
       height: 500px;
@@ -348,10 +346,6 @@ async function buyBlindBox() {
   .cont-success {
     position: relative;
 
-    .bg {
-      width: 330px;
-    }
-
     .icon-close {
       width: 30px;
       height: 30px;
@@ -362,7 +356,7 @@ async function buyBlindBox() {
 
     .cont-blind {
       position: absolute;
-      top: 50px;
+      top: 20px;
       left: 0;
       right: 0;
       overflow: scroll;
