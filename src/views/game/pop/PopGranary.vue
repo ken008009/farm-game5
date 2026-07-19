@@ -268,7 +268,9 @@ const onBlurAmt = () => {
   amt1.value = val.toFixed(2)
 }
 function confirmHandler() {
-  pledgeGit()
+  // 暂未开放
+  showToast(t('not_yet_open'))
+  // pledgeGit()
 }
 function waitHandler() {
   getWaitList(1)
