@@ -585,8 +585,8 @@ function showRechargeHandler() {
   step.value = 2
 }
 function showWithdraw2Handler() {
-  // step.value = 4
-  showToast(t('not_yet_open'))
+  step.value = 4
+  //showToast(t('not_yet_open'))
 }
 function showWithdraw3Handler() {
   step.value = 6
@@ -598,8 +598,8 @@ function showTransferHandler() {
   step.value = 9
 }
 function showRechargeISPAYHandler() {
-  // step.value = 8
-  showToast(t('not_yet_open'))
+  step.value = 8
+  //showToast(t('not_yet_open'))
 }
 function showExchangeHandler() {
   emit('close', { action: 'exchange' })
