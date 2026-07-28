@@ -1,7 +1,6 @@
 <template>
   <div class="bg-pop" @click="notDo()">
-    <div class="cont-income" @click="notDo()" v-if="true">
-      <div class="login-panel login-panel--w310 login-panel--h600" aria-hidden="true"></div>
+    <div class="cont-income login-panel login-panel--w310 login-panel--auto" @click="notDo()" v-if="true">
       <span class="pop-title">{{ $t('pop_title_rank') }}</span>
       <div class="cont-list">
         <div class="cont-tab">
@@ -181,22 +180,23 @@ async function getList(page) {
       position: absolute;
       right: -10px;
       top: 5px;
+      z-index: 4;
     }
 
     .cont-list {
-      position: absolute;
-      top: 20px;
-      left: 0;
-      right: 0;
+      position: relative;
       display: flex;
       flex-direction: column;
+      box-sizing: border-box;
+      padding: 40px 0 20px;
 
       .cont-tab {
         position: relative;
         width: 260px;
         height: 42px;
-        margin-top: 20px;
+        margin-top: 0;
         margin-left: 25px;
+        align-self: center;
 
         .line {
           position: absolute;
@@ -300,10 +300,10 @@ async function getList(page) {
       }
 
       .list-income {
-        height: 420px;
+        max-height: 55vh;
         margin-top: 10px;
         padding: 0 20px;
-        overflow-y: scroll !important;
+        overflow-y: auto;
 
         .mine {
           border: 1px solid #f9da61 !important;
@@ -378,7 +378,7 @@ async function getList(page) {
         font-size: 12px;
         text-decoration: underline;
         padding: 0 20px;
-        margin-top: 20px;
+        margin-top: 12px;
 
         .prev {
           margin-right: auto;

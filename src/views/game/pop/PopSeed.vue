@@ -1,7 +1,6 @@
 <template>
   <div class="bg-pop" @click="notDo()">
-    <div class="cont-pop" @click="notDo()" v-if="step == 1">
-      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+    <div class="cont-pop login-panel login-panel--w320 login-panel--auto" @click="notDo()" v-if="step == 1">
       <span class="pop-title">{{ $t('menu_label_seed') }}</span>
       <div class="cont-info">
         <div class="cont-top">
@@ -34,8 +33,7 @@
 
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="closeHandler()" alt="">
     </div>
-    <div class="cont-staking" @click="notDo()" v-if="step == 2">
-      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+    <div class="cont-staking login-panel login-panel--w320 login-panel--auto" @click="notDo()" v-if="step == 2">
       <span class="pop-title">{{ $t('pledge') }}</span>
       <div class="cont-info">
         <div class="cont-input">
@@ -46,8 +44,7 @@
       </div>
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="showHomeHandler()" alt="">
     </div>
-    <div class="cont-staking" @click="notDo()" v-if="step == 3">
-      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+    <div class="cont-staking login-panel login-panel--w320 login-panel--auto" @click="notDo()" v-if="step == 3">
       <span class="pop-title">{{ $t('redemption') }}</span>
       <div class="cont-info">
         <div class="cont-input">
@@ -59,8 +56,7 @@
       </div>
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="showHomeHandler()" alt="">
     </div>
-    <div class="cont-staking" @click="notDo()" v-if="step == 4">
-      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+    <div class="cont-staking login-panel login-panel--w320 login-panel--auto" @click="notDo()" v-if="step == 4">
       <span class="pop-title">{{ $t('start_game') }}</span>
       <div class="cont-info">
         <div class="cont-input">
@@ -71,8 +67,7 @@
       </div>
       <img class="icon-close" src="@/assets/images/game/icon_close.png" @click="showHomeHandler()" alt="">
     </div>
-    <div class="cont-result" @click="notDo()" v-if="step == 5">
-      <div class="login-panel login-panel--w320 login-panel--h540" aria-hidden="true"></div>
+    <div class="cont-result login-panel login-panel--w320 login-panel--auto" @click="notDo()" v-if="step == 5">
       <span class="pop-title">{{ $t('pop_title_result') }}</span>
       <div class="cont-info">
         <div class="cont-success" v-if="gameRes.playStatus == '1'">
@@ -241,6 +236,7 @@ async function game() {
       position: absolute;
       right: -10px;
       top: 5px;
+      z-index: 4;
     }
 
     .bg-top {
@@ -248,12 +244,11 @@ async function game() {
     }
 
     .cont-info {
-      position: absolute;
-      top: 60px;
-      left: 0;
-      right: 0;
+      position: relative;
       display: flex;
       flex-direction: column;
+      padding: 40px 0 24px;
+      box-sizing: border-box;
 
       .cont-top {
         width: 270px;
@@ -300,8 +295,8 @@ async function game() {
       .list-notice {
         display: flex;
         flex-direction: column;
-        height: 180px;
-        overflow: scroll;
+        max-height: 180px;
+        overflow-y: auto;
 
         .item-notice {
           display: flex;
@@ -412,15 +407,15 @@ async function game() {
       position: absolute;
       right: -10px;
       top: 5px;
+      z-index: 4;
     }
 
     .cont-info {
-      position: absolute;
-      top: 80px;
-      left: 0;
-      right: 0;
+      position: relative;
       display: flex;
       flex-direction: column;
+      padding: 48px 20px 28px;
+      box-sizing: border-box;
 
       .cont-input {
         width: 220px;
@@ -494,15 +489,15 @@ async function game() {
       position: absolute;
       right: -10px;
       top: 5px;
+      z-index: 4;
     }
 
     .cont-info {
-      position: absolute;
-      top: 80px;
-      left: 0;
-      right: 0;
+      position: relative;
       display: flex;
       flex-direction: column;
+      padding: 48px 20px 28px;
+      box-sizing: border-box;
 
       .cont-success {
         display: flex;
