@@ -439,12 +439,19 @@ function playGitAni() {
   }, 4000);
 }
 async function checkLogin() {
-  await checkAccount()
-  if (getToken()) {
-    init()
-    startTimer()
-  } else {
+  try {
+    await checkAccount()
+    if (getToken()) {
+      init()
+      startTimer()
+    } else {
+      showPopLogin.value = true
+    }
+  } catch (error) {
     showPopLogin.value = true
+    if (typeof error === 'string') {
+      showToast(error)
+    }
   }
 }
 function startTimer() {

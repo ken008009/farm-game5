@@ -9,11 +9,59 @@ const usdtAbi = [
     "function balanceOf(address owner) view returns (uint256)",
 ];
 
+const getUsdtDecimals = () => Number(import.meta.env.VITE_USDT_DECIMALS) || 6;
+
+const parseChainId = (chainId) => {
+    if (typeof chainId === 'string') {
+        return chainId.startsWith('0x') ? parseInt(chainId, 16) : Number(chainId);
+    }
+    return Number(chainId);
+};
+
+/** 常用链参数，用于 wallet_addEthereumChain */
+const CHAIN_CONFIG = {
+    1: {
+        chainId: '0x1',
+        chainName: 'Ethereum Mainnet',
+        nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+        rpcUrls: ['https://ethereum.publicnode.com'],
+        blockExplorerUrls: ['https://etherscan.io'],
+    },
+};
+
 /* 链接钱包类 */
 export class ETH {
     static provider = undefined;    // 提供者
     static account = "";         // 钱包地址
     static signer = undefined;       // 用户签名者
+
+    /** 当前钱包链与配置不一致时，尝试切换（如 BSC 56 → ETH 1） */
+    static async ensureCorrectChain(ethereum) {
+        const targetChainId = Number(import.meta.env.VITE_CHAINID);
+        const chainId = parseChainId(await ethereum.request({ method: 'eth_chainId' }));
+        if (chainId === targetChainId) return;
+
+        const hexChainId = '0x' + targetChainId.toString(16);
+        try {
+            await ethereum.request({
+                method: 'wallet_switchEthereumChain',
+                params: [{ chainId: hexChainId }],
+            });
+        } catch (error) {
+            // 钱包未添加该网络
+            if (error.code === 4902 && CHAIN_CONFIG[targetChainId]) {
+                await ethereum.request({
+                    method: 'wallet_addEthereumChain',
+                    params: [CHAIN_CONFIG[targetChainId]],
+                });
+                return;
+            }
+            if (error.code === 4001) {
+                throw '已取消切换网络，请在钱包中手动切换到以太坊主网';
+            }
+            throw '请连接以太坊网络';
+        }
+    }
 
     // 链接钱包返回钱包地址
     static async getAccount() {
@@ -22,12 +70,11 @@ export class ETH {
             //   Toast.show('请安装钱包'); // 显示失败的提示信息
             throw '请安装钱包'; // 抛出错误信息
         }
+        await ETH.ensureCorrectChain(ethereum);
         ETH.provider = new ethers.providers.Web3Provider(ethereum); // 使用 Web3Provider 创建提供者
-        const chainId = Number(await ethereum.request({ method: 'eth_chainId' })); // 获取链ID
-        // showToast(chainId)
-        if (chainId !== Number(import.meta.env.VITE_CHAINID) && chainId !== 1936529372) { // 如果链ID不匹配
-            //   Toast.show('请连接BSC网络'); // 显示失败的提示信息
-            throw '请连接BSC网络'; // 抛出错误信息
+        const chainId = parseChainId(await ethereum.request({ method: 'eth_chainId' })); // 获取链ID
+        if (chainId !== Number(import.meta.env.VITE_CHAINID)) { // 如果链ID不匹配
+            throw '请连接以太坊网络'; // 抛出错误信息
         }
         ETH.account = ethers.utils.getAddress((await ethereum.request({ method: 'eth_requestAccounts' }))[0]); // 获取钱包地址
         ETH.signer = ETH.provider.getSigner(); // 获取用户签名者
@@ -58,7 +105,7 @@ export class ETH {
         try {
             // 调用balanceOf函数来获取USDT余额
             const balance = await contract.balanceOf(ETH.account);
-            return ethers.utils.formatUnits(balance, 'ether');
+            return ethers.utils.formatUnits(balance, getUsdtDecimals());
         } catch (error) {
             console.error("获取USDT余额时出错:", error);
             return 0;
@@ -75,7 +122,7 @@ export class ETH {
             const contract = new ethers.Contract(import.meta.env.VITE_CONTRACT, abi.ISPS, ETH.signer); // 创建合约对象
             const path = [import.meta.env.VITE_ISPS, import.meta.env.VITE_USDT];
             const amountsOut = await contract.getAmountsOut(ethers.utils.parseEther(amount), path);
-            return ethers.utils.formatUnits(amountsOut[1].toString(), 'ether');
+            return ethers.utils.formatUnits(amountsOut[1].toString(), getUsdtDecimals());
         } catch (error) {
             console.log(error);
             return Promise.reject(error);

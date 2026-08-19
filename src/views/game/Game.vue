@@ -52,7 +52,8 @@
         <span class="num">{{ userInfo.usdt ? parseInt(userInfo.usdt) : 0 }}</span>
       </div> -->
       <div class="cont-bsc">
-        <img class="bg-bsc" src="@/assets/images/game/bg_top_bsc.png" alt="">
+        <div class="bg-bsc" aria-hidden="true"></div>
+        <span class="chain-tag">ETH</span>
         <span class="num">{{ maskString(userInfo.myAddress) }}</span>
       </div>
     </div>
@@ -644,14 +645,21 @@ function playGitAni() {
   }, 4000);
 }
 async function checkLogin() {
-  await checkAccount()
-  if (getToken()) {
-    init()
-    startTimer()
-    address.value = getAddr()
-    showLinkSuccess.value = true
-  } else {
+  try {
+    await checkAccount()
+    if (getToken()) {
+      init()
+      startTimer()
+      address.value = getAddr()
+      showLinkSuccess.value = true
+    } else {
+      showPopLogin.value = true
+    }
+  } catch (error) {
     showPopLogin.value = true
+    if (typeof error === 'string') {
+      showToast(error)
+    }
   }
 }
 function startTimer() {
@@ -977,22 +985,49 @@ async function submitMessage() {
     }
 
     .cont-bsc {
+      display: inline-flex;
+      align-items: center;
       height: 32px;
       position: relative;
       margin-left: auto;
+      padding: 0 8px 0 12px;
+      gap: 4px;
 
       .bg-bsc {
-        height: 32px;
-        width: 130px;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        background-color: rgba(88, 107, 30, 0.88);
+        box-sizing: border-box;
+      }
+
+      .chain-tag {
+        position: relative;
+        z-index: 1;
+        font-size: 11px;
+        font-weight: 500;
+        color: #fff;
+        letter-spacing: 0.5px;
+        line-height: 1;
+        flex-shrink: 0;
+        pointer-events: none;
       }
 
       .num {
+        position: relative;
+        z-index: 1;
         font-size: 10px;
         color: #000;
-        position: absolute;
-        left: 45px;
-        top: 10px;
-        width: 70px;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 8px;
+        box-sizing: border-box;
+        background-color: #eef30a;
+        border-radius: 10px;
+        white-space: nowrap;
+        flex-shrink: 0;
       }
     }
   }
