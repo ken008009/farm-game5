@@ -1,7 +1,6 @@
 <template>
   <div class="bg-pop">
-    <div class="cont-pop" @click="notDo()" v-show="step == 1">
-      <div class="login-panel login-panel--w330 login-panel--h560" aria-hidden="true"></div>
+    <div class="cont-pop login-panel login-panel--w330 login-panel--auto" @click="notDo()" v-show="step == 1">
       <span class="pop-title">{{ $t('land') }}</span>
       <div class="list-sub">
         <span class="item-sub" :class="[subTabSelect == 1 ? 'select-bg' : '']" @click="switchSubTabHandler(1)">{{
@@ -572,6 +571,11 @@ async function compoundLand(num, landOneId, landTwoId) {
 
   .cont-pop {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 40px 0 16px;
+    min-height: 560px;
 
     .icon-close {
       width: 30px;
@@ -579,16 +583,16 @@ async function compoundLand(num, landOneId, landTwoId) {
       position: absolute;
       right: -10px;
       top: 5px;
+      z-index: 4;
     }
 
     .list-sub {
-      position: absolute;
-      left: 30px;
-      top: 40px;
-      right: 0;
-      width: 100%;
+      position: relative;
       display: flex;
       align-items: center;
+      flex-shrink: 0;
+      padding: 0 30px 12px;
+      z-index: 2;
 
       .item-sub {
         font-size: 14px;
@@ -614,7 +618,7 @@ async function compoundLand(num, landOneId, landTwoId) {
         line-height: 30px;
         font-weight: bold;
         margin-left: auto;
-        margin-right: 42px;
+        margin-right: 0;
       }
 
       .select-bg {
@@ -623,15 +627,15 @@ async function compoundLand(num, landOneId, landTwoId) {
     }
 
     .list-land {
-      position: absolute;
-      top: 20px;
-      left: 0;
-      right: 0;
-      max-height: 480px;
-      overflow: scroll;
+      position: relative;
+      flex: 1;
+      min-height: 420px;
+      max-height: 55vh;
+      overflow-y: auto;
       display: flex;
       flex-wrap: wrap;
-      padding-left: 25px;
+      align-content: flex-start;
+      padding: 0 10px;
 
       .item-land {
         width: 90px;
@@ -705,16 +709,14 @@ async function compoundLand(num, landOneId, landTwoId) {
       }
     }
     .cont-bottom {
-      position: absolute;
-      bottom: 14px;
-      left: 0;
-      right: 0;
+      position: relative;
+      flex-shrink: 0;
       display: flex;
       align-items: center;
       font-size: 12px;
       text-decoration: underline;
-      padding: 0 20px;
-      margin-top: 20px;
+      padding: 12px 20px 0;
+      margin-top: 0;
 
       .prev {
         margin-right: auto;
