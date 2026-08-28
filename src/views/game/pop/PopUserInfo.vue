@@ -279,7 +279,7 @@
       <div class="cont-info">
         <span class="btn-confirm">{{ $t('game') }} → {{ $t('wallet') }}</span>
         <span class="balance">{{ $t('game_balance') }}:{{ toFixed4(info.usdt) }}USDT</span>
-        <!-- <span class="balance">{{ $t('can_withdraw') }}/{{ $t('day') }}:{{ toFixed4(info.canUsdtWithdraw) }}USDT</span> -->
+        <span class="balance">{{ $t('can_withdraw') }}/{{ $t('day') }}:{{ toFixed4(info.canUsdtWithdraw) }}USDT</span>
         <div class="cont-input">
           <input class="input-num" v-model="amt" maxlength="18" type="number"
             :placeholder="$t('please_enter_the_amount')">

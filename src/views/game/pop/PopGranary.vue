@@ -269,8 +269,8 @@ const onBlurAmt = () => {
 }
 function confirmHandler() {
   // 暂未开放
-    showToast(t('not_yet_open'))
-  // pledgeGit()
+   // showToast(t('not_yet_open'))
+  pledgeGit() 
 
 }
 function waitHandler() {
