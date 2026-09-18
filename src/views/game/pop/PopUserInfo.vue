@@ -38,12 +38,12 @@
             <span class="btn" @click="showWithdrawHandler()">{{ $t('withdraw') }}</span>
           </div>
           <div class="line"></div> -->
-          <div class="item-git">
+           <!-- <div class="item-git">
             <img class="icon-git" src="@/assets/images/game/icon_git.png" alt="">
             <span class="name">{{ $t('withdraw2') }}ISPAY</span>
             <span class="num">{{ toFixed2(info.gitNewNew) }}</span>
             <span class="btn" @click="showWithdraw4Handler()">{{ $t('withdraw') }}</span>
-          </div>
+          </div> -->
           <div class="line"></div>
           <div class="item-git">
             <img class="icon-git" src="@/assets/images/game/icon_giw.png" alt="">
